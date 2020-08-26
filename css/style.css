@@ -1,12 +1,3 @@
-/* import fonts from fonts.css file */
-@import "fonts.css";
-
-/* css variables */
-@import "variables.css";
-
-/* import global styling */
-@import "global.css";
-
 /* Text Selection start */
 
 ::-moz-selection {
