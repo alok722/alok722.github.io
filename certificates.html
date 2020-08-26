@@ -373,31 +373,6 @@
         </div>
     </footer>
 
-    <script>
-        const images = ["./img/banner/1.svg", "./img/banner/2.svg", "./img/banner/3.svg", "./img/banner/4.svg", "./img/banner/5.svg", "./img/banner/6.svg", "./img/banner/7.svg", "./img/banner/8.svg"];
-        let i = 0;
-        const renew = setInterval(function () {
-            if (images.length == i) {
-                i = 0;
-            }
-            else {
-                document.getElementById("banner-img").src = images[i];
-                i++;
-            }
-        }, 4000);
-    </script>
-
-    <script src="./dependencies/Typewriter/typewriter.min.js"></script>
-
-    <script>
-        var typewriter = new Typewriter('#subheading', {
-            strings: ['FULL STACK JAVASCRIPT DEVELOPER', 'FULL STACK WEB DEVELOPER', 'MEAN STACK DEVELOPER',
-                'MEVN STACK DEVELOPER'
-            ],
-            autoStart: true,
-            loop: true,
-        });
-    </script>
 
     <!--  Jquery js file  -->
     <script src="./js/jquery.3.4.1.js"></script>
