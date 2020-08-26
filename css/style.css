@@ -2,10 +2,10 @@
 @import "fonts.css";
 
 /* css variables */
-@import "_variables.css";
+@import "variables.css";
 
 /* import global styling */
-@import "_global.css";
+@import "global.css";
 
 /* Text Selection start */
 
