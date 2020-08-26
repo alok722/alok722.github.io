@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8358D0" offset="0%"></stop>
+            <stop stop-color="#54299F" offset="100%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="app-logo" fill-rule="nonzero">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="300" height="298"></rect>
+            <path d="M220,187.000832 C220,218.805187 195.082058,227.58148 185.885072,230.442189 C170.526559,235.22514 162.992927,234.137811 80,234.137811 L80,65 L162.196847,65 C213.715501,65 212.421062,102.396329 212.421062,106.926864 C212.421062,124.6542 203.081688,136.60834 188.253895,142.938144 L188.253895,143.410614 C215.695992,149.274421 220,173.040313 220,187.000832 Z M190.389718,183.162822 C190.389718,177.752069 189.5095,157.105774 161.963848,157.105774 L109.610282,157.105774 L109.610282,209.977116 L161.963848,209.977116 C164.682169,209.977116 190.389718,210.611391 190.389718,183.162822 Z M157.931672,135.831677 C158.365309,135.831677 182.810781,136.478896 182.810781,112.331145 C182.810781,102.286302 180.539041,89.1153899 157.931672,89.1153899 L109.610282,89.1153899 L109.610282,135.831677 L157.931672,135.831677 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
