@@ -1,11 +1,11 @@
 /* import fonts from fonts.css file */
-@import url(./fonts.css);
+@import url("./fonts.css");
 
 /* css variables */
-@import url(./partials/_variables.css);
+@import url("./partials/_variables.css");
 
 /* import global styling */
-@import url(./partials/_global.css);
+@import url("./partials/_global.css");
 
 /* Text Selection start */
 
