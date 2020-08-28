@@ -349,6 +349,10 @@ ul {
   opacity: 0;
 }
 
+.para a {
+  text-decoration: underline;
+}
+
 .site-main .about-area .owl-carousel .owl-dots .owl-dot.active span {
   background: var(--primary-color);
   width: 12px;
