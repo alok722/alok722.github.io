@@ -1,9 +1,39 @@
 {
-    "name": "alok raj",
-    "short_name": "alok",
-    "lang": "en-US",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "white",
-    "theme_color": "white"
-  }
+  "name": "Alok",
+  "short_name": "alok",
+  "lang": "en-US",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "orientation": "portrait-primary",
+  "url": "https://alokraj.tech",
+  "theme_color": "white",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
