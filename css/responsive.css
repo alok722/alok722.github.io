@@ -28,6 +28,12 @@
 
 /* if the viewport is equal to 340px or less than that */
 @media only screen and (max-width: 792px) {
+    .title-text {
+        font: normal bold 25px/ 72px var(--roboto)!important;
+    }
+    .site-main .site-banner .site-title h4 {
+        font-size: 1.1rem!important;
+      }
     .site-main .about-area .about-title h2>span {
         font-size: 31px;
         letter-spacing: 10px;
