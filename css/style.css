@@ -20,7 +20,7 @@ mark:hover {
   color: black !important;
   background-color: yellow !important;
   cursor: pointer;
-  -webkit-text-fill-color: black
+  -webkit-text-fill-color: black;
 }
 
 /* Text selection End */
@@ -114,7 +114,7 @@ mark:hover {
   font-size: 1.5rem;
 }
 
-.site-main .site-banner .banner-image>img {
+.site-main .site-banner .banner-image > img {
   padding: 0.5rem 0;
   width: 90rem;
 }
@@ -152,17 +152,17 @@ mark:hover {
   padding: 8rem 5rem;
 }
 
-.site-main .about-area .about-title h3>span {
+.site-main .about-area .about-title h3 > span {
   display: block;
   font: normal bold 49px/ 60px var(--roboto);
   letter-spacing: 21px;
 }
 
-.site-main .about-area .about-title .paragraph>p {
+.site-main .about-area .about-title .paragraph > p {
   padding: 0.4rem 0;
 }
 
-.exp>span {
+.exp > span {
   float: right;
   margin-right: 5vh;
   color: #4458dc;
@@ -292,11 +292,11 @@ ul {
   text-transform: uppercase;
 }
 
-.site-main .project-area .button-group button+button {
+.site-main .project-area .button-group button + button {
   padding-left: 3rem;
 }
 
-.site-main .project-area .grid .our-project>.title h4 {
+.site-main .project-area .grid .our-project > .title h4 {
   font: normal 700 25px/12px var(--roboto);
 }
 
@@ -393,13 +393,13 @@ footer.footer-area h5 {
   font: normal 500 23px/ 30px var(--roboto);
 }
 
-footer.footer-area .social a>i {
+footer.footer-area .social a > i {
   font-size: 22px;
   padding: 2rem;
   color: var(--border-color);
 }
 
-footer.footer-area .social a:hover>i {
+footer.footer-area .social a:hover > i {
   color: var(--primary-color);
 }
 
@@ -418,4 +418,63 @@ footer.footer-area .social a:hover>i {
   right: 30px;
   z-index: 99;
   font-size: 20px;
+}
+
+/* Dark Theme ------------------------------------- */
+.theme-change-icon{
+  width: 40px;
+}
+@media only screen and (min-width:991px){
+  .theme-change-icon.mobile{
+    display: none;
+  }
+}
+.dark .header_area .main-menu .navbar {
+  background-color: #191a1d !important;
+}
+.dark .navbar-light .navbar-brand {
+  color: rgb(252, 252, 252) !important;
+}
+.dark .header_area .main-menu .nav-item .nav-link {
+  color: rgb(252, 252, 252);
+}
+.dark .site-main {
+  background-color: #252930;
+}
+.dark .title-text {
+  color: rgb(252, 252, 252);
+}
+.dark {
+  color: rgb(252, 252, 252) !important;
+}
+.dark .bg-white {
+  background-color: #191a1d !important;
+}
+.dark .theme-bg-light {
+  background-color: #191a1d !important;
+  color: rgb(252, 252, 252) !important;
+}
+.dark .faq-accordion .card-title a {
+  color: #fff;
+}
+.dark .exp > span {
+  color: #c1c9fc;
+}
+.dark .faq-accordion .card-toggle .svg-inline--fa {
+  color: #eeefff;
+}
+.dark p.para {
+  color: rgb(252, 252, 252);
+}
+.dark .footer-area{
+  background: #000;
+}
+.dark .svg-inline--fa{
+  color: rgb(197, 197, 197);
+}
+.dark .svg-inline--fa:hover{
+  color: #fff;
+}
+.dark .site-main .project-area .button-group button + button {
+    color: rgb(252, 252, 252);
 }

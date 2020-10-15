@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body id="body">
     <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <!--  ======================= Start Header Area ============================== -->
     <header class="header_area">
@@ -54,6 +54,9 @@
                         <polyline points="5 7 10 12 5 17" />
                         <line x1="13" y1="17" x2="19" y2="17" />
                     </svg><b>ALOK RAJ</b></a>
+                <img class="theme-change-icon mobile" src="./img/light-theme-icon.png" alt="Dark Theme Icon"
+                    onclick="toggleTheme()">
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span><i class="fas fa-stream"></i></span>
@@ -70,6 +73,10 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#certificates">Certificates</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center">
+                            <img class="theme-change-icon" src="./img/light-theme-icon.png" alt="Dark Theme Icon"
+                                onclick="toggleTheme()">
                         </li>
                     </ul>
                 </div>
@@ -410,6 +417,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        var theme = 'light';
+
+        function toggleTheme() {
+            if (theme == 'light') {
+                document.getElementById("body").classList.add('dark');
+                document.getElementsByClassName("theme-change-icon").src = "./img/light-theme-icon.png";
+                theme = 'dark';
+            }
+            else {
+                document.getElementById("body").classList.remove('dark');
+                document.getElementsByClassName("theme-change-icon").src = "./img/dark-theme-icon.png";
+                theme = 'light';
+            }
+        }
+    </script>
 
 
     <!--  Jquery js file  -->
