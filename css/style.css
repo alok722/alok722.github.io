@@ -423,9 +423,11 @@ footer.footer-area .social a:hover > i {
 /* Dark Theme ------------------------------------- */
 .theme-change-icon{
   width: 40px;
+  margin-top: 12px;
+  cursor: pointer;
 }
 @media only screen and (min-width:991px){
-  .theme-change-icon.mobile{
+  .mobile-show{
     display: none;
   }
 }
