@@ -53,6 +53,11 @@ mark:hover {
 
 /* start navigation */
 
+#top-nav-fixed {
+  box-shadow: 0 2px 0px 0 rgba(0,0,0,0.1);
+  background-color: white;
+}
+
 .header_area .main-menu .navbar {
   padding: 1rem 20rem;
 }
@@ -99,6 +104,10 @@ mark:hover {
 
 .social:hover {
   color: var(--primary-color);
+}
+
+.site-main {
+  margin-top: 80px;
 }
 
 .site-main .site-banner .site-title h3 {
