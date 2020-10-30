@@ -36,7 +36,6 @@ a webpage to showcase my experience, education, skill-set, projects, certificate
 
 ## 🚀 future scope
 
-* adding dark mode toggle
 * adding blog section
 
 ## show your support
