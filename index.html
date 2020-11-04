@@ -45,7 +45,6 @@
 </head>
 
 <body id="body">
-    <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <!--  ======================= Start Header Area ============================== -->
     <header class="header_area">
         <div class="main-menu">
@@ -56,8 +55,12 @@
                         <path stroke="none" d="M0 0h24v24H0z" />
                         <polyline points="5 7 10 12 5 17" />
                         <line x1="13" y1="17" x2="19" y2="17" />
-                    </svg><b>ALOK RAJ</b></a>
-                <p class="theme-change-icon mobile-show" onclick="toggleTheme()">🌓</p>
+                    </svg><b>ALOK RAJ</b>
+                </a>
+                <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+                </label>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span><i class="fas fa-stream"></i></span>
@@ -86,9 +89,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#recommendations">Recommendations</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center">
-                            <p class="theme-change-icon" onclick="toggleTheme()">🌓</p>
                         </li>
                     </ul>
                 </div>
@@ -581,6 +581,8 @@
             </div>
         </div>
     </footer>
+
+    <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         const images = ["./img/banner/1.svg", "./img/banner/2.svg", "./img/banner/3.svg", "./img/banner/4.svg", "./img/banner/5.svg", "./img/banner/6.svg", "./img/banner/7.svg", "./img/banner/8.svg"];
