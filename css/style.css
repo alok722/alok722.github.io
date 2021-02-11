@@ -508,11 +508,17 @@ input:checked + .slider:before {
 /* Dark Theme ------------------------------------- */
 .theme-change-icon{
   width: 40px;
-  margin-top: 12px;
+  margin-left: auto;
+  padding-top: 15px;
   cursor: pointer;
 }
 @media only screen and (min-width:991px){
   .mobile-show{
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  .desktop-show{
     display: none;
   }
 }
