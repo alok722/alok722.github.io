@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     $('.site-main .about-area .owl-carousel').owlCarousel({
         loop: true,
-        autoplay: true,
+        autoplay: false,
         dots: true,
         responsive: {
             0: {
