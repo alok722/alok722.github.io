@@ -153,6 +153,14 @@ mark:hover {
   cursor: pointer;
 }
 
+.button.secondary-button:hover a {
+  color: whitesmoke;
+}
+
+.button.primary-button:hover a {
+  color: black;
+}
+
 /* End Banner Area */
 
 /* Start Experience Area */
