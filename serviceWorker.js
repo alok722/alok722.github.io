@@ -2,13 +2,6 @@ const cacheName = "alok-raj-portfolio";
 const filesToCache = [
   "/",
   "/index.html",
-  "/certificates.html",
-  "/favicon.ico",
-  "/css/*.css",
-  "/js/*.js",
-  "/img/*.png",
-  "/img/*.svg",
-  "/img/skills/*.svg"
 ];
 
 self.addEventListener("install", installEvent => {

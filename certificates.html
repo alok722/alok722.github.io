@@ -9,7 +9,7 @@
     <meta name="description"
         content="a portfolio to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations.">
     <meta name="keywords"
-        content="alok raj, Alok Raj, Alok raj, javascript developer, Alok developer, Alok Javascript developer, MEAN stack developer, Alok MEAN stack developer, full stack javascript developer, Alok full stack javascript developer, alok722, alok raj alok722">
+        content="alok raj, Alok Raj, Alok raj, javascript developer, Alok developer, Alok Javascript developer, MEAN stack developer, Alok MEAN stack developer, full stack javascript developer, Alok full stack javascript developer, alok722, alok raj alok722 MERN stack, Reactjs, UI developer, web developer">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
@@ -19,9 +19,9 @@
     <meta property="og:url" content="https://www.alokraj.tech" />
     <meta property="og:description"
         content="a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations." />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="theme-color" content="#fff" />
     <link rel="canonical" href="https://alokraj.tech" />
     <title>Alok Raj's Certificates</title>
@@ -59,13 +59,9 @@
     <header class="header_area">
         <div class="main-menu">
             <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="top-nav-fixed">
-                <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-prompt" width="40" height="40" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="#3F51B5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <polyline points="5 7 10 12 5 17" />
-                        <line x1="13" y1="17" x2="19" y2="17" />
-                    </svg><b>ALOK RAJ</b></a>
+                <a class="navbar-brand" href="/" style="margin-left: 5%;">
+                    <img src="./img/logo/logo.png" width="60px" alt="logo">
+                </a>
                 <p class="theme-change-icon mobile-show" onclick="toggleTheme()">🌓</p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,7 +71,7 @@
                     <div class="mr-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/alok722"
@@ -468,7 +464,7 @@
 
     <script>
         let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
-        document.addEventListener('DOMContentLoaded', () => { 
+        document.addEventListener('DOMContentLoaded', () => {
             if (theme == 'light') {
                 document.getElementById("body").classList.remove('dark');
                 document.getElementsByClassName("theme-change-icon").src = "./img/dark-theme-icon.png";

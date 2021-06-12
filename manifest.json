@@ -1,39 +1,32 @@
 {
-  "name": "Alok",
+  "name": "Alok Raj",
   "short_name": "Alok",
   "lang": "en-US",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "white",
   "orientation": "portrait-primary",
-  "url": "https://alokraj.tech",
-  "theme_color": "white",
-  "prefer_related_applications": true,
+  "theme_color": "#efefef",
   "icons": [
     {
-      "src": "/apple-touch-icon.png",
-      "type": "image/png",
-      "sizes": "180x180"
+        "src": "/img/logo/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
     },
     {
-      "src": "/favicon-32x32.png",
-      "type": "image/png",
-      "sizes": "32x32"
+        "src": "/img/logo/icon-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
     },
     {
-      "src": "/favicon-16x16.png",
-      "type": "image/png",
-      "sizes": "16x16"
+        "src": "/img/logo/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
     },
     {
-      "src": "/android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+        "src": "/img/logo/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
     }
-  ]
+]
 }
