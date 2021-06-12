@@ -1,32 +1,41 @@
 {
-  "name": "Alok Raj",
-  "short_name": "Alok",
-  "lang": "en-US",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "white",
-  "orientation": "portrait-primary",
-  "theme_color": "#efefef",
-  "icons": [
-    {
-        "src": "/img/logo/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    },
-    {
-        "src": "/img/logo/icon-256x256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-    },
-    {
-        "src": "/img/logo/icon-384x384.png",
-        "sizes": "384x384",
-        "type": "image/png"
-    },
-    {
-        "src": "/img/logo/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }
-]
+    "name": "Alok Raj",
+    "short_name": "Alok",
+    "lang": "en-US",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "orientation": "portrait-primary",
+    "theme_color": "#efefef",
+    "description": "A portfolio web app.",
+    "icons": [
+        {
+            "src": "/img/logo/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/logo/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/logo/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/logo/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Certificates",
+            "url": "certificates.html",
+            "description": "Snapshot of Certificates"
+        }
+    ]
 }
