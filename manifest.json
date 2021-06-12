@@ -1,5 +1,5 @@
 {
-    "name": "Alok Raj",
+    "name": "Alok",
     "short_name": "Alok",
     "lang": "en-US",
     "start_url": "index.html",
@@ -29,13 +29,6 @@
             "src": "/img/logo/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
-        }
-    ],
-    "shortcuts": [
-        {
-            "name": "Certificates",
-            "url": "certificates.html",
-            "description": "Snapshot of Certificates"
         }
     ]
 }
