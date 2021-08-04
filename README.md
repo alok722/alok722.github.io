@@ -9,12 +9,12 @@
   </a>
 </p>
 
-### 🏠 [homepage](https://alokraj.tech)
+### 🏠 [homepage](https://alokraj.me)
 
 ## install
 
 ```sh
-git clone https://github.com/alok722/alokraj.tech
+git clone https://github.com/alok722/alokraj.me.git
 ```
 
 ## usage
