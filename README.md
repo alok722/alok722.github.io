@@ -9,12 +9,12 @@
   </a>
 </p>
 
-### 🏠 [homepage](https://alokraj.me)
+### 🏠 [homepage](https://alok722.github.io/alokraj/)
 
 ## install
 
 ```sh
-git clone https://github.com/alok722/alokraj.me.git
+git clone https://github.com/alok722/alokraj.git
 ```
 
 ## usage
@@ -29,15 +29,15 @@ a webpage to showcase my experience, education, skill-set, projects, certificate
 
 ## 👤 author
 
- **alok raj (alokr417@gmail.com)**
+**alok raj (alokr417@gmail.com)**
 
-* website: https://alokraj.tech/
-* linkedin: [@alok722](https://linkedin.com/in/alok722)
+- website: https://alok722.github.io/alokraj/
+- linkedin: [@alok722](https://linkedin.com/in/alok722)
 
 ## 🚀 future scope
 
-* adding blog section
-* adding contact me section
+- adding blog section
+- adding contact me section
 
 ## show your support
 
@@ -45,6 +45,6 @@ give a ⭐️ if you are using this template for your webpage.
 
 ## 📝 license
 
-This project is [MIT](https://github.com/alok722/portfolio/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/alok722/alokraj/blob/master/LICENSE) licensed.
 
-***
+---
