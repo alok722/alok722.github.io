@@ -675,14 +675,19 @@
 
     <script>
         let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
+        if (theme == 'light') {
+            document.getElementsByClassName('toggle')[0].checked = true;
+            document.getElementsByClassName('toggle')[1].checked = true;
+        } else {
+            document.getElementsByClassName('toggle')[0].checked = false;
+            document.getElementsByClassName('toggle')[1].checked = false;
+        }
         document.addEventListener('DOMContentLoaded', () => {
             if (theme == 'light') {
                 document.getElementById("body").classList.remove('dark');
-                document.getElementsByClassName("theme-change-icon").src = "./img/dark-theme-icon.png";
             }
             else {
                 document.getElementById("body").classList.add('dark');
-                document.getElementsByClassName("theme-change-icon").src = "./img/light-theme-icon.png";
             }
         });
 

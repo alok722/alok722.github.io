@@ -846,6 +846,13 @@
 
     <script>
         let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
+        if (theme == 'light') {
+            document.getElementsByClassName('toggle')[0].checked = true;
+            document.getElementsByClassName('toggle')[1].checked = true;
+        } else {
+            document.getElementsByClassName('toggle')[0].checked = false;
+            document.getElementsByClassName('toggle')[1].checked = false;
+        }
         document.addEventListener('DOMContentLoaded', () => {
             if (theme == 'light') {
                 document.getElementById("body").classList.remove('dark');
