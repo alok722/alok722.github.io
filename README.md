@@ -31,7 +31,7 @@ a webpage to showcase my experience, education, skill-set, projects, certificate
 
 **alok raj (alokr417@gmail.com)**
 
-- website: https://alok722.github.io/alokraj/
+- website: https://alok722.github.io/
 - linkedin: [@alok722](https://linkedin.com/in/alok722)
 
 ## 🚀 future scope
