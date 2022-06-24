@@ -1,6 +1,6 @@
 <h1 align="center">welcome to my portfolio 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-3.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-3.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/open-devs/fastify-typescript-generator/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-blue.svg" />
   </a>
@@ -9,12 +9,12 @@
   </a>
 </p>
 
-### 🏠 [homepage](https://alok722.github.io/alokraj/)
+### 🏠 [homepage](https://alok722.github.io/)
 
 ## install
 
 ```sh
-git clone https://github.com/alok722/alokraj.git
+git clone https://github.com/alok722/alok722.github.io.git
 ```
 
 ## usage
