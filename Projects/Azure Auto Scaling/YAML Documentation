@@ -1,0 +1,163 @@
+Thanks for sharing your pipeline YAML, William. Based on this configuration and all the context we’ve built, here’s a fully structured documentation draft for your Azure DevOps pipeline.
+
+---
+
+# 📄 **Azure DevOps Pipeline for Terraform Deployment**  
+### *CI/CD Integration with Azure Key Vault and Service Principal Authentication*  
+**Author:** William  
+**Date:** July 2025  
+**Environment:** Sandbox (Dev/Test)
+
+---
+
+## 🧭 Executive Summary
+
+This document outlines the Azure DevOps pipeline configuration used to automate the deployment of sandbox infrastructure in Azure using Terraform. The pipeline securely retrieves secrets from Azure Key Vault, installs Terraform, and executes the provisioning workflow using service principal authentication.
+
+The pipeline is designed for modularity, security, and scalability, and serves as a foundation for future multi-environment CI/CD workflows.
+
+---
+
+## 📦 Pipeline Overview
+
+- **Trigger:** On commits to `main` branch
+- **Agent Pool:** Hosted Ubuntu agent (`ubuntu-latest`)
+- **Secrets:** Pulled from Azure Key Vault (`TFScalingKV`)
+- **Terraform Version:** Latest available
+- **Authentication:** Service Principal via environment variables
+- **Execution Flow:** `init` → `plan` → `apply`
+
+---
+
+## 🔐 Secret Management
+
+### 🔹 Azure Key Vault Task
+
+```yaml
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,servicePrincipalClientId,servicePrincipalClientSecret,subscriptionId,tenantId'
+    RunAsPreJob: true
+```
+
+> Retrieves secrets securely and makes them available as pipeline variables.
+
+---
+
+## 🧱 Pipeline Structure
+
+### 🔹 Trigger
+
+```yaml
+trigger:
+  branches:
+    include:
+      - main
+```
+
+> Automatically runs the pipeline on changes to the `main` branch.
+
+---
+
+### 🔹 Agent Pool
+
+```yaml
+pool:
+  vmImage: 'ubuntu-latest'
+```
+
+> Uses Microsoft-hosted Ubuntu agents for Terraform execution.
+
+---
+
+### 🔹 Variables
+
+```yaml
+variables:
+  TF_VAR_admin_username: $(sandboxAdminUser)
+  TF_VAR_admin_password: $(sandboxAdminPassword)
+  ARM_CLIENT_ID: $(servicePrincipalClientId)
+  ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+  ARM_SUBSCRIPTION_ID: $(subscriptionId)
+  ARM_TENANT_ID: $(tenantId)
+```
+
+> Injects secrets into Terraform via environment variables.
+
+---
+
+### 🔹 Terraform Installer
+
+```yaml
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+```
+
+> Ensures the latest version of Terraform is available on the agent.
+
+---
+
+### 🔹 Terraform Execution
+
+```yaml
+- script: |
+    terraform init
+    terraform plan -out=tfplan
+    terraform apply tfplan
+  displayName: 'Run Terraform'
+  env:
+    TF_VAR_admin_username: $(sandboxAdminUser)
+    TF_VAR_admin_password: $(sandboxAdminPassword)
+    ARM_CLIENT_ID: $(servicePrincipalClientId)
+    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+    ARM_SUBSCRIPTION_ID: $(subscriptionId)
+    ARM_TENANT_ID: $(tenantId)
+```
+
+> Executes the full Terraform workflow using service principal authentication.
+
+---
+
+## 🧠 Implementation Notes
+
+- ✅ Switched from Azure CLI to **Service Principal authentication** for pipeline compatibility
+- ✅ Injected secrets using `TF_VAR_` and `ARM_` environment variables
+- ✅ Ensured secrets are securely retrieved via Azure Key Vault
+- ✅ Used hosted agents for consistent and scalable execution
+- ✅ Resolved Terraform state lock issues and ensured remote backend stability
+
+---
+
+## 🚀 Future Plans for CI/CD Improvement
+
+### 🔹 Environment Separation
+
+- Create separate pipelines for `dev`, `test`, and `prod`
+- Use Terraform workspaces or separate state files for isolation
+
+### 🔹 Approval Gates
+
+- Add manual approval steps before applying changes to production
+- Integrate with Azure DevOps environments and release pipelines
+
+### 🔹 Enhanced Logging and Monitoring
+
+- Capture and archive Terraform logs
+- Integrate with Azure Monitor for deployment insights
+
+### 🔹 Secret Rotation and Expiry
+
+- Automate service principal secret rotation
+- Use Key Vault policies to enforce expiration and renewal
+
+### 🔹 Modular Pipeline Design
+
+- Break pipeline into reusable templates
+- Parameterize environment-specific values
+
+---
+
+Let me know if you’d like this formatted for executive review, split into multiple documents, or expanded with visuals. You’ve built a secure and scalable CI/CD foundation—ready to evolve into full enterprise-grade automation.
