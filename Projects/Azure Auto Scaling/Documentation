@@ -1,0 +1,217 @@
+Absolutely, William—here’s a fully structured and professional version of your documentation, complete with a title page, executive summary, section headers, and a forward-looking roadmap for infrastructure improvements.
+
+---
+
+# 📄 **Azure Sandbox Infrastructure Deployment**  
+### *Terraform + Azure DevOps Integration*  
+**Author:** William  
+**Date:** July 2025  
+**Environment:** Sandbox (Dev/Test)
+
+---
+
+## 🧭 Executive Summary
+
+This document outlines the design, implementation, and deployment of a secure and scalable sandbox infrastructure in Microsoft Azure using Terraform and Azure DevOps. The solution automates provisioning of core resources—including a Windows Virtual Machine Scale Set (VMSS), networking components, and secure credential management—while leveraging remote state storage and service principal authentication for CI/CD.
+
+The project emphasizes modularity, security, and scalability, and serves as a foundation for future expansion into production-grade environments.
+
+---
+
+## 📦 Project Overview
+
+- **Tooling:** Terraform, Azure DevOps, Azure Key Vault, Azure Storage
+- **Authentication:** Service Principal with secrets stored in Key Vault
+- **State Management:** Remote backend in Azure Blob Storage
+- **Infrastructure Scope:**
+  - Resource Group
+  - Virtual Network and Subnet
+  - Windows VM Scale Set
+  - Secure admin credentials
+  - Pipeline integration for automated deployment
+
+---
+
+## 🧱 Infrastructure Components
+
+### 🔹 Resource Group
+
+```hcl
+resource "azurerm_resource_group" "sandbox" {
+  name     = "sandbox-rg"
+  location = "East US"
+}
+```
+
+---
+
+### 🔹 Virtual Network and Subnet
+
+```hcl
+resource "azurerm_virtual_network" "sandbox" {
+  name                = "sandbox-vnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.sandbox.location
+  resource_group_name = azurerm_resource_group.sandbox.name
+}
+
+resource "azurerm_subnet" "sandbox" {
+  name                 = "sandbox-subnet"
+  resource_group_name  = azurerm_resource_group.sandbox.name
+  virtual_network_name = azurerm_virtual_network.sandbox.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
+```
+
+---
+
+### 🔹 Windows Virtual Machine Scale Set
+
+```hcl
+resource "azurerm_windows_virtual_machine_scale_set" "sandbox_scale_set" {
+  name                = "sandbox-vmss"
+  location            = azurerm_resource_group.sandbox.location
+  resource_group_name = azurerm_resource_group.sandbox.name
+  sku                 = "Standard_F2"
+  instances           = 2
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
+  computer_name_prefix = "sandbox"
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2019-Datacenter"
+    version   = "latest"
+  }
+
+  os_disk {
+    storage_account_type = "Standard_LRS"
+    caching              = "ReadWrite"
+  }
+
+  network_interface {
+    name    = "sandbox-nic"
+    primary = true
+
+    ip_configuration {
+      name      = "internal"
+      primary   = true
+      subnet_id = azurerm_subnet.sandbox.id
+    }
+  }
+
+  upgrade_mode = "Manual"
+}
+```
+
+---
+
+## 🔐 Security and Secrets Management
+
+### 🔹 Azure Key Vault (`TFScalingKV`)
+
+Secrets stored:
+
+| Secret Name               | Purpose                        |
+|---------------------------|--------------------------------|
+| `sandboxAdminUser`        | VMSS admin username            |
+| `sandboxAdminPassword`    | VMSS admin password            |
+| `servicePrincipalClientId`| Terraform service principal ID |
+| `servicePrincipalClientSecret`| SP password                |
+| `subscriptionId`          | Azure subscription ID          |
+| `tenantId`                | Azure AD tenant ID             |
+
+---
+
+## 📂 Terraform Backend Configuration
+
+```hcl
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "tfstate-rg"
+    storage_account_name  = "tfstatestorageaccount1"
+    container_name        = "tfstate"
+    key                   = "terraform.tfstate"
+  }
+}
+```
+
+> Enables remote state storage with locking and consistency.
+
+---
+
+## 🔄 Azure DevOps Pipeline Integration
+
+### 🔹 Key Vault Task
+
+```yaml
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,servicePrincipalClientId,servicePrincipalClientSecret,subscriptionId,tenantId'
+    RunAsPreJob: true
+```
+
+### 🔹 Terraform Execution
+
+```yaml
+- script: |
+    terraform init
+    terraform plan -out=tfplan
+    terraform apply tfplan
+  displayName: 'Run Terraform'
+  env:
+    TF_VAR_admin_username: $(sandboxAdminUser)
+    TF_VAR_admin_password: $(sandboxAdminPassword)
+    ARM_CLIENT_ID: $(servicePrincipalClientId)
+    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+    ARM_SUBSCRIPTION_ID: $(subscriptionId)
+    ARM_TENANT_ID: $(tenantId)
+```
+
+---
+
+## 🧠 Implementation Notes
+
+- ✅ Switched from Azure CLI to **Service Principal authentication** for CI/CD compatibility
+- ✅ Resolved missing arguments in VMSS resource block
+- ✅ Added supporting resources to fix undeclared references
+- ✅ Used `TF_VAR_` environment variables for secure credential injection
+- ✅ Resolved Terraform state lock issue with `terraform force-unlock`
+- ✅ Verified parallel resource creation and dependency handling
+
+---
+
+## 🚀 Future Plans for Infrastructure Improvement
+
+### 🔹 Modularization
+
+- Split infrastructure into modules: `networking`, `compute`, `identity`, `monitoring`
+- Improve reusability across dev/test/prod environments
+
+### 🔹 Environment Separation
+
+- Create separate pipelines and state files for `dev`, `test`, and `prod`
+- Use workspaces or separate backends for isolation
+
+### 🔹 Monitoring and Logging
+
+- Integrate Azure Monitor and Log Analytics
+- Add diagnostics settings to VMSS and network resources
+
+### 🔹 Security Enhancements
+
+- Implement NSGs and Just-In-Time VM access
+- Rotate secrets automatically via Key Vault policies
+- Add conditional access policies for external users
+
+### 🔹 Cost Optimization
+
+- Use auto-scaling policies for VMSS
+- Tag resources for cost tracking and governance
+
+---
+
+Let me know if you'd like this broken into separate documents for each module or formatted for executive presentation. You’ve built a solid foundation—now it’s ready to scale.
