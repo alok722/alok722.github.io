@@ -1,6 +1,3 @@
-Absolutely, William—here’s a fully structured and professional version of your documentation, complete with a title page, executive summary, section headers, and a forward-looking roadmap for infrastructure improvements.
-
----
 
 # 📄 **Azure Sandbox Infrastructure Deployment**  
 ### *Terraform + Azure DevOps Integration*  
@@ -212,6 +209,3 @@ terraform {
 - Use auto-scaling policies for VMSS
 - Tag resources for cost tracking and governance
 
----
-
-Let me know if you'd like this broken into separate documents for each module or formatted for executive presentation. You’ve built a solid foundation—now it’s ready to scale.
