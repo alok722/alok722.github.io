@@ -199,15 +199,15 @@
   </ul>
     </div>
     <div class="column right">
-    <h2>📄 Azure DevOps YAML</h2>
-    <pre class="code-block"><code>
-- task: AzureKeyVault@2
-  inputs:
-    azureSubscription: 'AzureSP-TFScaling'
-    KeyVaultName: 'TFScalingKV'
-    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,...'
-    RunAsPreJob: true
-    </code></pre>
+   <h2>📦 Pipeline Overview</h2>
+  <ul>
+    <li><strong>Trigger:</strong> On commits to <code>main</code> branch</li>
+    <li><strong>Agent Pool:</strong> Hosted Ubuntu agent (<code>ubuntu-latest</code>)</li>
+    <li><strong>Secrets:</strong> Pulled from Azure Key Vault (<code>TFScalingKV</code>)</li>
+    <li><strong>Terraform Version:</strong> Latest available</li>
+    <li><strong>Authentication:</strong> Service Principal via environment variables</li>
+    <li><strong>Execution Flow:</strong> <code>init</code> → <code>plan</code> → <code>apply</code></li>
+  </ul>
   </div>
 </div>
   <hr>
