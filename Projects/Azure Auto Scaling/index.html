@@ -211,8 +211,7 @@
   </div>
 </div>
   <hr>
-<div class="side-by-side">                                    
-<div class="column left">
+
   <h2>🧱 Infrastructure Components</h2>
 
   <h3>🔹 Resource Group</h3>
@@ -272,65 +271,9 @@ resource "azurerm_subnet" "sandbox" {
 
   upgrade_mode = "Manual"
 }</code></pre>
-</div>
-<div class="column right">
-<h2>🧱 Pipeline Structure</h2>
-
-  <h3>🔹 Trigger</h3>
-  <pre class="yaml-block"><code>
-trigger:
-  branches:
-    include:
-      - main
-  </code></pre>
-  <p><em>Automatically runs the pipeline on changes to the <code>main</code> branch.</em></p>
-
-  <h3>🔹 Agent Pool</h3>
-  <pre class="yaml-block"><code>
-pool:
-  vmImage: 'ubuntu-latest'
-  </code></pre>
-  <p><em>Uses Microsoft-hosted Ubuntu agents for Terraform execution.</em></p>
-
-  <h3>🔹 Variables</h3>
-  <pre class="yaml-block"><code>
-variables:
-  TF_VAR_admin_username: $(sandboxAdminUser)
-  TF_VAR_admin_password: $(sandboxAdminPassword)
-  ARM_CLIENT_ID: $(servicePrincipalClientId)
-  ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
-  ARM_SUBSCRIPTION_ID: $(subscriptionId)
-  ARM_TENANT_ID: $(tenantId)
-  </code></pre>
-  <p><em>Injects secrets into Terraform via environment variables.</em></p>
-
-  <h3>🔹 Terraform Installer</h3>
-  <pre class="yaml-block"><code>
-- task: TerraformInstaller@1
-  inputs:
-    terraformVersion: 'latest'
-  </code></pre>
-  <p><em>Ensures the latest version of Terraform is available on the agent.</em></p>
-
-  <h3>🔹 Terraform Execution</h3>
-  <pre class="yaml-block"><code>
-- script: |
-    terraform init
-    terraform plan -out=tfplan
-    terraform apply tfplan
-  displayName: 'Run Terraform'
-  env:
-    TF_VAR_admin_username: $(sandboxAdminUser)
-    TF_VAR_admin_password: $(sandboxAdminPassword)
-    ARM_CLIENT_ID: $(servicePrincipalClientId)
-    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
-    ARM_SUBSCRIPTION_ID: $(subscriptionId)
-    ARM_TENANT_ID: $(tenantId)
-  </code></pre>
-  <p><em>Executes the full Terraform workflow using service principal authentication.</em></p>
-</div>
-</div>                                                                    
+                                                                    
   <hr>
+<div class="side by side">                                    
 <div class="column left">
   <h2>🔐 Security and Secrets Management</h2>
   <h3>🔹 Azure Key Vault (TFScalingKV)</h3>
@@ -348,7 +291,6 @@ variables:
     </tbody>
   </table>
 </div>
-</div>
  <div class="column right">                                   
   <h2>🔐 Secret Management</h2>
   <h3>🔹 Azure Key Vault Task</h3>
@@ -363,62 +305,7 @@ variables:
   <p><em>Retrieves secrets securely and makes them available as pipeline variables.</em></p>
  </div>            
 </div>
-<div class="column right">
-    <h2>🧱 Pipeline Structure</h2>
-
-  <h3>🔹 Trigger</h3>
-  <pre class="yaml-block"><code>
-trigger:
-  branches:
-    include:
-      - main
-  </code></pre>
-  <p><em>Automatically runs the pipeline on changes to the <code>main</code> branch.</em></p>
-
-  <h3>🔹 Agent Pool</h3>
-  <pre class="yaml-block"><code>
-pool:
-  vmImage: 'ubuntu-latest'
-  </code></pre>
-  <p><em>Uses Microsoft-hosted Ubuntu agents for Terraform execution.</em></p>
-
-  <h3>🔹 Variables</h3>
-  <pre class="yaml-block"><code>
-variables:
-  TF_VAR_admin_username: $(sandboxAdminUser)
-  TF_VAR_admin_password: $(sandboxAdminPassword)
-  ARM_CLIENT_ID: $(servicePrincipalClientId)
-  ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
-  ARM_SUBSCRIPTION_ID: $(subscriptionId)
-  ARM_TENANT_ID: $(tenantId)
-  </code></pre>
-  <p><em>Injects secrets into Terraform via environment variables.</em></p>
-
-  <h3>🔹 Terraform Installer</h3>
-  <pre class="yaml-block"><code>
-- task: TerraformInstaller@1
-  inputs:
-    terraformVersion: 'latest'
-  </code></pre>
-  <p><em>Ensures the latest version of Terraform is available on the agent.</em></p>
-
-  <h3>🔹 Terraform Execution</h3>
-  <pre class="yaml-block"><code>
-- script: |
-    terraform init
-    terraform plan -out=tfplan
-    terraform apply tfplan
-  displayName: 'Run Terraform'
-  env:
-    TF_VAR_admin_username: $(sandboxAdminUser)
-    TF_VAR_admin_password: $(sandboxAdminPassword)
-    ARM_CLIENT_ID: $(servicePrincipalClientId)
-    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
-    ARM_SUBSCRIPTION_ID: $(subscriptionId)
-    ARM_TENANT_ID: $(tenantId)
-  </code></pre>
-  <p><em>Executes the full Terraform workflow using service principal authentication.</em></p>
-</div>    
+                
   <hr>
 
   <div class="column left">                                  
