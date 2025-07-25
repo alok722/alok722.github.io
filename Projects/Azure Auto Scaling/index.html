@@ -172,7 +172,16 @@
     </div>
     <div class="column right">
     <h2>📄 Azure DevOps YAML</h2>
-    </div>
+    <pre class="code-block"><code>
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,...'
+    RunAsPreJob: true
+    </code></pre>
+  </div>
+</div>
   <hr>
 
   <h2>🧱 Infrastructure Components</h2>
