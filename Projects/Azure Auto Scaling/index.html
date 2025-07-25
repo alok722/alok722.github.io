@@ -201,17 +201,17 @@
     <div class="column right">
    <h2>📦 Pipeline Overview</h2>
   <ul>
-    <li><strong>Trigger:</strong> On commits to <code>main</code> branch</li>
-    <li><strong>Agent Pool:</strong> Hosted Ubuntu agent (<code>ubuntu-latest</code>)</li>
-    <li><strong>Secrets:</strong> Pulled from Azure Key Vault (<code>TFScalingKV</code>)</li>
+    <li><strong>Trigger:</strong> On commits to main branch</li>
+    <li><strong>Agent Pool:</strong> Hosted Ubuntu agent (ubuntu-latest)</li>
+    <li><strong>Secrets:</strong> Pulled from Azure Key Vault (TFScalingKV)</li>
     <li><strong>Terraform Version:</strong> Latest available</li>
     <li><strong>Authentication:</strong> Service Principal via environment variables</li>
-    <li><strong>Execution Flow:</strong> <code>init</code> → <code>plan</code> → <code>apply</code></li>
+    <li><strong>Execution Flow:</strong> init → plan → apply</li>
   </ul>
   </div>
 </div>
   <hr>
-
+<div class="column left">
   <h2>🧱 Infrastructure Components</h2>
 
   <h3>🔹 Resource Group</h3>
@@ -271,11 +271,11 @@ resource "azurerm_subnet" "sandbox" {
 
   upgrade_mode = "Manual"
 }</code></pre>
-
+</div>
   <hr>
-
+<div class="column left">
   <h2>🔐 Security and Secrets Management</h2>
-  <h3>🔹 Azure Key Vault (<code>TFScalingKV</code>)</h3>
+  <h3>🔹 Azure Key Vault (TFScalingKV)</h3>
   <table>
     <thead>
       <tr><th>Secret Name</th><th>Purpose</th></tr>
@@ -289,9 +289,23 @@ resource "azurerm_subnet" "sandbox" {
       <tr><td>tenantId</td><td>Azure AD tenant ID</td></tr>
     </tbody>
   </table>
-
+</div>
+ <div class="column right">                                   
+  <h2>🔐 Secret Management</h2>
+  <h3>🔹 Azure Key Vault Task</h3>
+  <pre class="yaml-block"><code>
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,servicePrincipalClientId,servicePrincipalClientSecret,subscriptionId,tenantId'
+    RunAsPreJob: true
+  </code></pre>
+  <p><em>Retrieves secrets securely and makes them available as pipeline variables.</em></p>
+ </div>                                    
   <hr>
 
+  <div class="column left">                                  
   <h2>📂 Terraform Backend Configuration</h2>
   <pre><code>terraform {
   backend "azurerm" {
@@ -302,9 +316,9 @@ resource "azurerm_subnet" "sandbox" {
   }
 }</code></pre>
   <p><em>Enables remote state storage with locking and consistency.</em></p>
-
+  </div>
   <hr>
-
+<div class="column left">
   <h2>🔄 Azure DevOps Pipeline Integration</h2>
 
   <h3>🔹 Key Vault Task</h3>
@@ -328,7 +342,7 @@ resource "azurerm_subnet" "sandbox" {
     ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
     ARM_SUBSCRIPTION_ID: $(subscriptionId)
     ARM_TENANT_ID: $(tenantId)</code></pre>
-
+</div>
   <hr>
 
   <h2>🧠 Implementation Notes</h2>
