@@ -40,32 +40,35 @@
     hr { margin: 2em 0; }
         .side-by-side {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+      gap: 1rem;
+      padding: 1rem;
+    }
 
-  .column {
-    flex: 1;
-    min-width: 300px;
-  }
+    .column {
+      flex: 1;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
 
-  .code-block {
-    background-color: #f8f9fa;
-    border-left: 4px solid #0078D4;
-    padding: 1rem;
-    border-radius: 6px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
+    .left {
+      background-color: #e3f2fd;
+    }
 
-  .left h2, .right h2 {
-    margin-bottom: 0.5rem;
-  }
+    .middle {
+      background-color: #fff3e0;
+    }
+
+    .right {
+      background-color: #e8f5e9;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
   </style>
     <!--  Bootstrap css file  -->
     <link rel="stylesheet" href="https://pacy035.github.io/css/bootstrap.min.css">
@@ -211,7 +214,7 @@
   </div>
 </div>
   <hr>
-
+<div class="column middle">
   <h2>🧱 Infrastructure Components</h2>
 
   <h3>🔹 Resource Group</h3>
@@ -271,7 +274,7 @@ resource "azurerm_subnet" "sandbox" {
 
   upgrade_mode = "Manual"
 }</code></pre>
-                                                                    
+</div>                                                                   
   <hr>
 <div class="side by side">                                    
 <div class="column left">
