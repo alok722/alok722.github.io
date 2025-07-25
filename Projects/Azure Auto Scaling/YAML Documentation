@@ -1,6 +1,3 @@
-Thanks for sharing your pipeline YAML, William. Based on this configuration and all the context we’ve built, here’s a fully structured documentation draft for your Azure DevOps pipeline.
-
----
 
 # 📄 **Azure DevOps Pipeline for Terraform Deployment**  
 ### *CI/CD Integration with Azure Key Vault and Service Principal Authentication*  
@@ -158,6 +155,3 @@ variables:
 - Break pipeline into reusable templates
 - Parameterize environment-specific values
 
----
-
-Let me know if you’d like this formatted for executive review, split into multiple documents, or expanded with visuals. You’ve built a secure and scalable CI/CD foundation—ready to evolve into full enterprise-grade automation.
