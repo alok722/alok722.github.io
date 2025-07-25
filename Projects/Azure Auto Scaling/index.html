@@ -47,6 +47,10 @@
 
     .column {
       flex: 1;
+      min-width: 0;  
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; /* or wrap if needed */  
       padding: 1rem;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -54,14 +58,19 @@
     }
 
     .left {
+      max-width: 200px;
+      flex-shrink: 0;  
       background-color: #e3f2fd;
     }
 
     .middle {
+      flex: 1;  
       background-color: #fff3e0;
     }
 
     .right {
+      max-width: 200px;
+      flex-shrink: 0;  
       background-color: #e8f5e9;
     }
 
