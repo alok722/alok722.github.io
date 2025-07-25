@@ -222,7 +222,7 @@
     <li><strong>Execution Flow:</strong> init → plan → apply</li>
   </ul>
   </div>
-
+</div>
   <hr>                                   
 <div class="column middle">
   <h2>🧱 Infrastructure Components</h2>
@@ -286,8 +286,8 @@ resource "azurerm_subnet" "sandbox" {
 }</code></pre>
 </div>                                       
   <hr>
-                                                                      
-<div class="column left">
+<div class="side by side">                                                                      
+    <div class="column left">
   <h2>🔐 Security and Secrets Management</h2>
   <h3>🔹 Azure Key Vault (TFScalingKV)</h3>
   <table>
@@ -303,9 +303,8 @@ resource "azurerm_subnet" "sandbox" {
       <tr><td>tenantId</td><td>Azure AD tenant ID</td></tr>
     </tbody>
   </table>
-</div>
-</div>    
- <div class="column right">                                   
+</div>  
+     <div class="column right">                                   
   <h2>🔐 Secret Management</h2>
   <h3>🔹 Azure Key Vault Task</h3>
   <pre class="yaml-block"><code>
@@ -318,7 +317,7 @@ resource "azurerm_subnet" "sandbox" {
   </code></pre>
   <p><em>Retrieves secrets securely and makes them available as pipeline variables.</em></p>
  </div>            
-
+</div>
                                     
   <hr>
 
