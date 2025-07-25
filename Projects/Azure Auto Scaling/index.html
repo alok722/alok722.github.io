@@ -307,8 +307,7 @@ resource "azurerm_subnet" "sandbox" {
 </div>
                 
   <hr>
-
-  <div class="column left">                                  
+                            
   <h2>📂 Terraform Backend Configuration</h2>
   <pre><code>terraform {
   backend "azurerm" {
@@ -319,9 +318,9 @@ resource "azurerm_subnet" "sandbox" {
   }
 }</code></pre>
   <p><em>Enables remote state storage with locking and consistency.</em></p>
-  </div>
+
   <hr>
-<div class="column left">
+
   <h2>🔄 Azure DevOps Pipeline Integration</h2>
 
   <h3>🔹 Key Vault Task</h3>
@@ -346,7 +345,7 @@ resource "azurerm_subnet" "sandbox" {
     ARM_SUBSCRIPTION_ID: $(subscriptionId)
     ARM_TENANT_ID: $(tenantId)</code></pre>
 
-</div>    
+   
   <hr>
 
   <h2>🧠 Implementation Notes</h2>
