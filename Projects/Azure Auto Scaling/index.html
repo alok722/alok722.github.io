@@ -38,6 +38,40 @@
     th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; }
     th { background-color: #eee; }
     hr { margin: 2em 0; }
+
+.portfolio-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.portfolio-gallery h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  width: calc(33.333% - 13.33px); /* 3 images with spacing */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+      
         .side-by-side {
     display: flex;
       flex-wrap: nowrap;
@@ -522,7 +556,19 @@ variables:
         </section>
         <!--  ========================= End Experience Area ==========================  -->
         
-    </main>
+<section class="portfolio-gallery">
+  <h2>Project Snapshots</h2>
+  <div class="image-grid">
+    <img src="Projects/Azure Auto Scaling/Images/Apply Executed.png" alt="Apply Executed" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Auto_scaling Vnet.png" alt="Auto Scaling VNET" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Azure Key Vault.png" alt="Azure Key Vault" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Fetching secrets.PNG" alt="Fetching Secrets" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Generated Resources for Azure Auto Scaling.png" alt="Generated Resources" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Plan Executed.png" alt="Terraform Plan" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Storage Account.png" alt="Storage Account Holding TF State" loading="lazy">
+    <img src="Projects/Azure Auto Scaling/Images/Successful Run.png" alt="Successful Run of Pipeline" loading="lazy">
+  </div>
+</section>
     <!--  ======================= End Main Area ================================ -->
 
     <footer class="footer-area">
