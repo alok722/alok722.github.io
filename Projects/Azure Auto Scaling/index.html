@@ -48,9 +48,10 @@
     .column {
       flex: 1;
       min-width: 0;  
-      overflow: hidden;
+      overflow: visible;
       text-overflow: ellipsis;
-      white-space: nowrap; /* or wrap if needed */  
+      white-space: normal; /* or wrap if needed */  
+      word-break: break-word; /* break long words if needed */  
       padding: 1rem;
       border: 1px solid #ccc;
       border-radius: 8px;
