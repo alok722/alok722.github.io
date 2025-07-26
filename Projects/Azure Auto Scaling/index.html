@@ -424,7 +424,8 @@ variables:
 </div>
 
   <hr>
-
+<div class="side-by-side">  
+<div class="column left">    
   <h2>🧠 Implementation Notes</h2>
   <ul>
     <li>✅ Switched from Azure CLI to <strong>Service Principal authentication</strong> for CI/CD compatibility</li>
@@ -434,9 +435,22 @@ variables:
     <li>✅ Resolved Terraform state lock issue with terraform force-unlock </li>
     <li>✅ Verified parallel resource creation and dependency handling</li>
   </ul>
-
+</div>
+<div class="column right">
+  <h2>🧠 Implementation Notes</h2>
+  <ul>
+    <li>✅ Switched from Azure CLI to <strong>Service Principal authentication</strong> for pipeline compatibility</li>
+    <li>✅ Injected secrets using TF_VAR_ and ARM_ environment variables</li>
+    <li>✅ Ensured secrets are securely retrieved via Azure Key Vault</li>
+    <li>✅ Used hosted agents for consistent and scalable execution</li>
+    <li>✅ Resolved Terraform state lock issues and ensured remote backend stability</li>
+  </ul>
+</div>    
+</div>                                                                    
   <hr>
 
+<div class="side-by-side">  
+<div class="column left">    
   <h2>🚀 Future Plans for Infrastructure Improvement</h2>
 
   <h3>🔹 Modularization</h3>
@@ -468,7 +482,42 @@ variables:
   <ul>
     <li>Use auto-scaling policies for VMSS</li>
     <li>Tag resources for cost tracking and governance</li>
-  
+</div>
+
+<div class="column right">
+  <h2>🚀 Future Plans for CI/CD Improvement</h2>
+
+  <h3>🔹 Environment Separation</h3>
+  <ul>
+    <li>Create separate pipelines for dev, test, and prod</li>
+    <li>Use Terraform workspaces or separate state files for isolation</li>
+  </ul>
+
+  <h3>🔹 Approval Gates</h3>
+  <ul>
+    <li>Add manual approval steps before applying changes to production</li>
+    <li>Integrate with Azure DevOps environments and release pipelines</li>
+  </ul>
+
+  <h3>🔹 Enhanced Logging and Monitoring</h3>
+  <ul>
+    <li>Capture and archive Terraform logs</li>
+    <li>Integrate with Azure Monitor for deployment insights</li>
+  </ul>
+
+  <h3>🔹 Secret Rotation and Expiry</h3>
+  <ul>
+    <li>Automate service principal secret rotation</li>
+    <li>Use Key Vault policies to enforce expiration and renewal</li>
+  </ul>
+
+  <h3>🔹 Modular Pipeline Design</h3>
+  <ul>
+    <li>Break pipeline into reusable templates</li>
+    <li>Parameterize environment-specific values</li>
+  </ul>    
+</div>
+</div>    
         </section>
         <!--  ========================= End Experience Area ==========================  -->
         
