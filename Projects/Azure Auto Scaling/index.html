@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="William Lacy | IT/Cyber/Azure">
+    <meta name="description"
+        content="a portfolio to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations.">
+    <meta name="keywords"
+        content="Will Lacy, Azure, IT, Cyber Security, Cloud Infrastructure, IAM, DevOps">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Will Lacy">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pacy035.github.io/" />
+    <meta property="og:description"
+        content="a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations." />
+    <link rel="shortcut icon" href="https://pacy035.github.io/Wedding Photo.ico" type="image/x-icon">
+    <link rel="icon" href="https://pacy035.github.io/Wedding Photo.ico" type="image/x-icon">
+    <link rel="img/logo/logo.png" sizes="180x180" href="https://pacy035.github.io/img/logo/logo.png">
+    <meta name="theme-color" content="#fff" />
+    <link rel="canonical" href="https://pacy035.github.io/" />
+    <title>Azure Auto Scaling</title>
+
+    <link rel="stylesheet" href="https://pacy035.github.io/css/variables.css">
+    <link rel="stylesheet" href="https://pacy035.github.io/css/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+    <link rel="manifest" href="https://pacy035.github.io/manifest.json">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2em; }
+    h1, h2, h3 { color: #2c3e50; }
+    code, pre { background-color: #f4f4f4; padding: 1em; display: block; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; }
+    th { background-color: #eee; }
+    hr { margin: 2em 0; }
+
+.portfolio-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.portfolio-gallery h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  width: calc(33.333% - 13.33px); /* 3 images with spacing */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+      
+        .side-by-side {
+    display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 0;  
+      overflow: visible;
+      text-overflow: ellipsis;
+      white-space: normal; /* or wrap if needed */  
+      word-break: break-word; /* break long words if needed */  
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .left {
+      max-width: 500px;
+      flex-shrink: 0;  
+      background-color: #e3f2fd;
+    }
+
+    .middle {
+      flex: 1;  
+      background-color: #fff3e0;
+    }
+
+    .right {
+      max-width: 500px;
+      flex-shrink: 0;  
+      background-color: #e8f5e9;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/css/bootstrap.min.css">
+
+    <!--  font awesome icons  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/css/all.min.css">
+
+    <!--  Magnific Popup css file  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/dependencies/magnific-popup/dist/magnific-popup.css">
+
+    <!--  Owl-carousel css file  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/dependencies/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://pacy035.github.io/dependencies/owl-carousel/css/owl.theme.default.min.css">
+
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/css/style.css">
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="https://pacy035.github.io/css/responsive.css">
+
+</head>
+
+<body id="body">
+    <!--  ======================= Start Header Area ============================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="top-nav-fixed">
+                <a class="navbar-brand" href="#" style="margin-left: 5%;">
+                    <img src="https://pacy035.github.io/img/logo/logo.png" width="60px" alt="logo">
+                </a>
+                <input class="toggle mobile-show" type="checkbox" checked onclick="toggleTheme()">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fas fa-stream"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://pacy035.github.io">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://pacy035.github.io/projects.html"><mark>Projects</mark></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://pacy035.github.io/certificates.html"><mark>Certificates</mark></a>
+                        </li>
+                        <li class="nav-item">
+                            <input class="toggle desktop-show" type="checkbox" checked onclick="toggleTheme()">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--  ======================= End Header Area ============================== -->
+
+    <!--  ======================= Start Main Area ================================ -->
+    <main class="site-main">
+
+        <!--  ======================= Start Banner Area =======================  -->
+        <section class="site-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-1 site-title">
+                        <h3 class="title-text text-uppercase">Azure Auto Scaling Built With TerraForm</h3>
+                        <h4>Created An Azure Scale Set that automatically spins up new machines when one goes down for updates.</h4>
+                        <div class="social">
+                            <a target="_blank" rel="noreferrer" href="https://github.com/pacy035" class="social-link offset-lg-1"><i class="fab fa-github"></i></a>
+                            <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/willlacy" class="social-link offset-lg-1"><i class="fab fa-linkedin"></i></a>
+                            <a target="_blank" rel="nonreferrer" href="./Assets/Will_Lacy.pdf" class="social-link offset-lg-1"> <i class="fas fa-file"></i></a>
+                            <a href="mailto:willplcy@gmail.com" class="social-link offset-lg-1"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+        </section>
+        <!--  ======================= End Banner Area =======================  -->
+
+
+        <!--  ========================= Start Documentation Area ==========================  -->
+        <section class="faq-section py-5" id="Documentation">
+            <div class="container single-col-max">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="about-title">
+                            <h3 class="text-uppercase title-text" style="font-size: 35px;">Documentation</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="exp-accordion" class="faq-accordion mx-auto">
+                    <div class="card border-0 mb-4 shadow-sm">
+                        <div class="card-header border-0 p-4 theme-bg-light">
+                            <h4 class="card-title mb-0 exp">
+                                <i class="fas fa-building mr-2"></i>
+                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
+                                    href="#experience5" aria-expanded="false">
+                                    <i class="fas fa-chevron-up"></i>
+           <hr>                 
+
+  <h1>📄 <strong>Azure Sandbox Infrastructure Deployment</strong></h1>
+  <h3><em>Terraform + Azure DevOps Integration</em></h3>
+  <p><strong>Author:</strong> William Lacy<br>
+     <strong>Date:</strong> July 2025<br>
+     <strong>Environment:</strong> Sandbox (Dev/Test)</p>
+
+  <hr>
+
+  <h2>🧭 Executive Summary</h2>
+  <p>This document outlines the design, implementation, and deployment of a secure and scalable sandbox infrastructure in Microsoft Azure using Terraform and Azure DevOps</p>
+
+  <hr>
+<div class="side-by-side">
+    <div class="column left">
+  <h2>📦 Project Overview</h2>                                                                                                                              
+  <ul>
+    <li><strong>Tooling:</strong> Terraform, Azure DevOps, Azure Key Vault, Azure Storage</li>
+    <li><strong>Authentication:</strong> Service Principal with secrets stored in Key Vault</li>
+    <li><strong>State Management:</strong> Remote backend in Azure Blob Storage</li>
+    <li><strong>Infrastructure Scope:</strong>
+      <ul>
+        <li>Resource Group</li>
+        <li>Virtual Network and Subnet</li>
+        <li>Windows VM Scale Set</li>
+        <li>Secure admin credentials</li>
+        <li>Pipeline integration for automated deployment</li>
+      </ul>
+    </li>
+  </ul>
+    </div>
+    <div class="column right">
+   <h2>📦 Pipeline Overview</h2>
+  <ul>
+    <li><strong>Trigger:</strong> On commits to main branch</li>
+    <li><strong>Agent Pool:</strong> Hosted Ubuntu agent (ubuntu-latest)</li>
+    <li><strong>Secrets:</strong> Pulled from Azure Key Vault (TFScalingKV)</li>
+    <li><strong>Terraform Version:</strong> Latest available</li>
+    <li><strong>Authentication:</strong> Service Principal via environment variables</li>
+    <li><strong>Execution Flow:</strong> init → plan → apply</li>
+  </ul>
+  </div>
+</div>
+  <hr>      
+<div class="side-by-side">                                    
+<div class="column middle">
+  <h2>🧱 Infrastructure Components</h2>
+
+  <h3>🔹 Resource Group</h3>
+  <pre><code>resource "azurerm_resource_group" "sandbox" {
+  name     = "sandbox-rg"
+  location = "East US"
+}</code></pre>
+
+  <h3>🔹 Virtual Network and Subnet</h3>
+  <pre><code>resource "azurerm_virtual_network" "sandbox" {
+  name                = "sandbox-vnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.sandbox.location
+  resource_group_name = azurerm_resource_group.sandbox.name
+}
+
+resource "azurerm_subnet" "sandbox" {
+  name                 = "sandbox-subnet"
+  resource_group_name  = azurerm_resource_group.sandbox.name
+  virtual_network_name = azurerm_virtual_network.sandbox.name
+  address_prefixes     = ["10.0.1.0/24"]
+}</code></pre>
+
+  <h3>🔹 Windows Virtual Machine Scale Set</h3>
+  <pre><code>resource "azurerm_windows_virtual_machine_scale_set" "sandbox_scale_set" {
+  name                = "sandbox-vmss"
+  location            = azurerm_resource_group.sandbox.location
+  resource_group_name = azurerm_resource_group.sandbox.name
+  sku                 = "Standard_F2"
+  instances           = 2
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
+  computer_name_prefix = "sandbox"
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2019-Datacenter"
+    version   = "latest"
+  }
+
+  os_disk {
+    storage_account_type = "Standard_LRS"
+    caching              = "ReadWrite"
+  }
+
+  network_interface {
+    name    = "sandbox-nic"
+    primary = true
+
+    ip_configuration {
+      name      = "internal"
+      primary   = true
+      subnet_id = azurerm_subnet.sandbox.id
+    }
+  }
+
+  upgrade_mode = "Manual"
+}</code></pre>
+</div>    
+</div>                                       
+  <hr>
+<div class="side-by-side">                                                                    
+    <div class="column left">
+  <h2>🔐 Security and Secrets Management</h2>
+  <h3>🔹 Azure Key Vault (TFScalingKV)</h3>
+  <table>
+    <thead>
+      <tr><th>Secret Name</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>sandboxAdminUser</td><td>VMSS admin username</td></tr>
+      <tr><td>sandboxAdminPassword</td><td>VMSS admin password</td></tr>
+      <tr><td>servicePrincipalClientId</td><td>Terraform service principal ID</td></tr>
+      <tr><td>servicePrincipalClientSecret</td><td>SP password</td></tr>
+      <tr><td>subscriptionId</td><td>Azure subscription ID</td></tr>
+      <tr><td>tenantId</td><td>Azure AD tenant ID</td></tr>
+    </tbody>
+  </table>
+</div>  
+     <div class="column right">                                   
+  <h2>🔐 Secret Management</h2>
+  <h3>🔹 Azure Key Vault Task</h3>
+  <pre class="yaml-block"><code>
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,servicePrincipalClientId,servicePrincipalClientSecret,subscriptionId,tenantId'
+    RunAsPreJob: true
+  </code></pre>
+  <p><em>Retrieves secrets securely and makes them available as pipeline variables.</em></p>
+ </div>            
+</div>
+                                    
+  <hr>
+<div class="side-by-side">
+ <div class="column middle">    
+  <h2>📂 Terraform Backend Configuration</h2>
+  <pre><code>terraform {
+  backend "azurerm" {
+    resource_group_name   = "tfstate-rg"
+    storage_account_name  = "tfstatestorageaccount1"
+    container_name        = "tfstate"
+    key                   = "terraform.tfstate"
+  }
+}</code></pre>
+  <p><em>Enables remote state storage with locking and consistency.</em></p>
+ </div>
+</div>
+                                    
+  <hr>
+<div class="side-by-side">
+ <div class="column left">                                  
+  <h2>🔄 Azure DevOps Pipeline Integration</h2>
+
+  <h3>🔹 Key Vault Task</h3>
+  <pre><code>- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'AzureSP-TFScaling'
+    KeyVaultName: 'TFScalingKV'
+    SecretsFilter: 'sandboxAdminUser,sandboxAdminPassword,servicePrincipalClientId,servicePrincipalClientSecret,subscriptionId,tenantId'
+    RunAsPreJob: true</code></pre>
+
+  <h3>🔹 Terraform Execution</h3>
+  <pre><code>- script: |
+    terraform init
+    terraform plan -out=tfplan
+    terraform apply tfplan
+  displayName: 'Run Terraform'
+  env:
+    TF_VAR_admin_username: $(sandboxAdminUser)
+    TF_VAR_admin_password: $(sandboxAdminPassword)
+    ARM_CLIENT_ID: $(servicePrincipalClientId)
+    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+    ARM_SUBSCRIPTION_ID: $(subscriptionId)
+    ARM_TENANT_ID: $(tenantId)</code></pre>
+ </div>
+
+<div class="column right">
+    <h2>🧱 Pipeline Structure</h2>
+
+  <h3>🔹 Trigger</h3>
+  <pre class="yaml-block"><code>
+trigger:
+  branches:
+    include:
+      - main
+  </code></pre>
+  <p><em>Automatically runs the pipeline on changes to the <code>main</code> branch.</em></p>
+
+  <h3>🔹 Agent Pool</h3>
+  <pre class="yaml-block"><code>
+pool:
+  vmImage: 'ubuntu-latest'
+  </code></pre>
+  <p><em>Uses Microsoft-hosted Ubuntu agents for Terraform execution.</em></p>
+
+  <h3>🔹 Variables</h3>
+  <pre class="yaml-block"><code>
+variables:
+  TF_VAR_admin_username: $(sandboxAdminUser)
+  TF_VAR_admin_password: $(sandboxAdminPassword)
+  ARM_CLIENT_ID: $(servicePrincipalClientId)
+  ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+  ARM_SUBSCRIPTION_ID: $(subscriptionId)
+  ARM_TENANT_ID: $(tenantId)
+  </code></pre>
+  <p><em>Injects secrets into Terraform via environment variables.</em></p>
+
+  <h3>🔹 Terraform Installer</h3>
+  <pre class="yaml-block"><code>
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+  </code></pre>
+  <p><em>Ensures the latest version of Terraform is available on the agent.</em></p>
+
+  <h3>🔹 Terraform Execution</h3>
+  <pre class="yaml-block"><code>
+- script: |
+    terraform init
+    terraform plan -out=tfplan
+    terraform apply tfplan
+  displayName: 'Run Terraform'
+  env:
+    TF_VAR_admin_username: $(sandboxAdminUser)
+    TF_VAR_admin_password: $(sandboxAdminPassword)
+    ARM_CLIENT_ID: $(servicePrincipalClientId)
+    ARM_CLIENT_SECRET: $(servicePrincipalClientSecret)
+    ARM_SUBSCRIPTION_ID: $(subscriptionId)
+    ARM_TENANT_ID: $(tenantId)
+  </code></pre>
+  <p><em>Executes the full Terraform workflow using service principal authentication.</em></p>
+</div>
+</div>
+
+  <hr>
+<div class="side-by-side">  
+<div class="column left">    
+  <h2>🧠 Implementation Notes</h2>
+  <ul>
+    <li>✅ Switched from Azure CLI to <strong>Service Principal authentication</strong> for CI/CD compatibility</li>
+    <li>✅ Resolved missing arguments in VMSS resource block</li>
+    <li>✅ Added supporting resources to fix undeclared references</li>
+    <li>✅ Used TF_VAR_ environment variables for secure credential injection</li>
+    <li>✅ Resolved Terraform state lock issue with terraform force-unlock </li>
+    <li>✅ Verified parallel resource creation and dependency handling</li>
+  </ul>
+</div>
+<div class="column right">
+  <h2>🧠 Implementation Notes</h2>
+  <ul>
+    <li>✅ Switched from Azure CLI to <strong>Service Principal authentication</strong> for pipeline compatibility</li>
+    <li>✅ Injected secrets using TF_VAR_ and ARM_ environment variables</li>
+    <li>✅ Ensured secrets are securely retrieved via Azure Key Vault</li>
+    <li>✅ Used hosted agents for consistent and scalable execution</li>
+    <li>✅ Resolved Terraform state lock issues and ensured remote backend stability</li>
+  </ul>
+</div>    
+</div>                                                                    
+  <hr>
+
+<div class="side-by-side">  
+<div class="column left">    
+  <h2>🚀 Future Plans for Infrastructure Improvement</h2>
+
+  <h3>🔹 Modularization</h3>
+  <ul>
+    <li>Split infrastructure into modules: <code>networking</code>, <code>compute</code>, <code>identity</code>, <code>monitoring</code></li>
+    <li>Improve reusability across dev/test/prod environments</li>
+  </ul>
+
+  <h3>🔹 Environment Separation</h3>
+  <ul>
+    <li>Create separate pipelines and state files for <code>dev</code>, <code>test</code>, and <code>prod</code></li>
+    <li>Use workspaces or separate backends for isolation</li>
+  </ul>
+
+  <h3>🔹 Monitoring and Logging</h3>
+  <ul>
+    <li>Integrate Azure Monitor and Log Analytics</li>
+    <li>Add diagnostics settings to VMSS and network resources</li>
+  </ul>
+
+  <h3>🔹 Security Enhancements</h3>
+  <ul>
+    <li>Implement NSGs and Just-In-Time VM access</li>
+    <li>Rotate secrets automatically via Key Vault policies</li>
+    <li>Add conditional access policies for external users</li>
+  </ul>
+
+  <h3>🔹 Cost Optimization</h3>
+  <ul>
+    <li>Use auto-scaling policies for VMSS</li>
+    <li>Tag resources for cost tracking and governance</li>
+</div>
+
+<div class="column right">
+  <h2>🚀 Future Plans for CI/CD Improvement</h2>
+
+  <h3>🔹 Environment Separation</h3>
+  <ul>
+    <li>Create separate pipelines for dev, test, and prod</li>
+    <li>Use Terraform workspaces or separate state files for isolation</li>
+  </ul>
+
+  <h3>🔹 Approval Gates</h3>
+  <ul>
+    <li>Add manual approval steps before applying changes to production</li>
+    <li>Integrate with Azure DevOps environments and release pipelines</li>
+  </ul>
+
+  <h3>🔹 Enhanced Logging and Monitoring</h3>
+  <ul>
+    <li>Capture and archive Terraform logs</li>
+    <li>Integrate with Azure Monitor for deployment insights</li>
+  </ul>
+
+  <h3>🔹 Secret Rotation and Expiry</h3>
+  <ul>
+    <li>Automate service principal secret rotation</li>
+    <li>Use Key Vault policies to enforce expiration and renewal</li>
+  </ul>
+
+  <h3>🔹 Modular Pipeline Design</h3>
+  <ul>
+    <li>Break pipeline into reusable templates</li>
+    <li>Parameterize environment-specific values</li>
+  </ul>    
+</div>
+</div>    
+        </section>
+        <!--  ========================= End Experience Area ==========================  -->
+        
+<section class="portfolio-gallery">
+  <h2>Project Snapshots</h2>
+  <div class="image-grid">
+    <img src="/Assets/Auto_Scaling.png" alt="Auto_Scaling Initial Draft" alt="Rought Draft of Design">    
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Apply Executed.png" alt="Apply Executed" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Auto_scaling Vnet.png" alt="Auto Scaling VNET" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Azure Key Vault.png" alt="Azure Key Vault" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Fetching secrets.PNG" alt="Fetching Secrets" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Generated Resources for Azure Auto Scaling.png" alt="Generated Resources" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Plan Executed.png" alt="Terraform Plan" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Storage Account.png" alt="Storage Account Holding TF State" loading="lazy">
+    <img src="https://pacy035.github.io/Projects/Azure Auto Scaling/Images/Successful Run.png" alt="Successful Run of Pipeline" loading="lazy">
+  </div>
+</section>
+    <!--  ======================= End Main Area ================================ -->
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="">
+                <div class="site-logo text-center py-4">
+                    <img src="https://pacy035.github.io/img/logo/logo.png" width="60px" alt="logo">
+                </div>
+                <div class="text-center">
+                    <h5 class="text-uppercase">Socials below:</h5>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/pacy035" class="social social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/willlacy/"
+                        class="social social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:willplcy@gmail.com" class="social social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="copyrights text-center">
+                    <p class="para">
+                        || Made with a fork of a Github Repository, linked below: ||
+                    </p>
+                    <p>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/alok722/alokraj.tech/fork"
+                            data-color-scheme="no-preference: dark; light: dark; dark: light;"
+                            data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+                            aria-label="Fork alok722/alokraj.tech on GitHub">Fork</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
+        if (theme == 'light') {
+            document.getElementsByClassName('toggle')[0].checked = true;
+            document.getElementsByClassName('toggle')[1].checked = true;
+        } else {
+            document.getElementsByClassName('toggle')[0].checked = false;
+            document.getElementsByClassName('toggle')[1].checked = false;
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            if (theme == 'light') {
+                document.getElementById("body").classList.remove('dark');
+            }
+            else {
+                document.getElementById("body").classList.add('dark');
+            }
+        });
+
+        function toggleTheme() {
+            if (theme == 'light') {
+                document.getElementById("body").classList.add('dark');
+                theme = 'dark';
+                localStorage.setItem("portfolio-theme", 'dark');
+            }
+            else {
+                document.getElementById("body").classList.remove('dark');
+                theme = 'light';
+                localStorage.setItem("portfolio-theme", 'light');
+            }
+        }
+    </script>
+
+    <script src="https://pacy035.github.io/dependencies/Typewriter/typewriter.min.js"></script>
+
+    <script>
+        var typewriter = new Typewriter('#subheading', {
+            strings: ['SOFTWARE ENGINEER', 'FULL STACK DEVELOPER', 'MERN STACK DEVELOPER', 'MEAN STACK DEVELOPER'],
+            autoStart: true,
+            loop: true,
+        });
+    </script>
+
+    <!--  Jquery js file  -->
+    <script defer src="https://pacy035.github.io/js/jquery.3.4.1.js"></script>
+
+    <!--  Bootstrap js file  -->
+    <script defer src="https://pacy035.github.io/js/bootstrap.min.js"></script>
+
+    <script defer src="https://pacy035.github.io/js/all.min.js"></script>
+
+    <!--  isotope js library  -->
+    <script defer src="https://pacy035.github.io/dependencies/isotope/isotope.min.js"></script>
+
+    <!--  Magnific popup script file  -->
+    <script defer src="https://pacy035.github.io/dependencies/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+    <!--  Owl-carousel js file  -->
+    <script defer src="https://pacy035.github.io/dependencies/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!--  custom js file  -->
+    <script defer src="https://pacy035.github.io/js/main.js"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- lottie-player -->
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
