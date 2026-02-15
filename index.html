@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="title" content="Alok Raj | Software Engineer">
+    <meta name="title" content="Alok Raj | AI-Augmented Full-Stack Engineer | GenAI & LLM Integration">
     <meta name="description"
-        content="a portfolio to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations.">
+        content="Senior Software Engineer with 6+ years in full-stack JavaScript, React, Node.js, microfrontend architecture, and AI-augmented development. Expertise in Generative AI, LLM integrations, prompt engineering, RAG, and vector databases.">
     <meta name="keywords"
-        content="software engineer, alok raj, Alok Raj, Alok raj, javascript developer, Alok developer, Alok Javascript developer, MEAN stack developer, Alok MEAN stack developer, full stack javascript developer, Alok full stack javascript developer, alok722, alok raj alok722">
+        content="software engineer, alok raj, full stack developer, AI engineer, AI-augmented developer, generative AI developer, LLM integration, prompt engineering, RAG developer, vector database, react developer, node.js developer, typescript developer, microfrontend architect, senior software engineer, javascript developer, NestJS, GraphQL, GenAI, AI-assisted development, machine learning engineer, open source contributor">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
@@ -17,59 +17,95 @@
     <meta name="author" content="Alok Raj">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alok722.github.io/" />
+    <meta property="og:title" content="Alok Raj | AI-Augmented Full-Stack Engineer | GenAI & LLM Integration" />
     <meta property="og:description"
-        content="a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations." />
+        content="Senior Software Engineer with 6+ years building scalable apps with React, Node.js, and AI-driven workflows. Specializing in microfrontends, Generative AI, LLM integrations, and prompt engineering." />
+    <meta property="og:image" content="https://alok722.github.io/img/logo/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Alok Raj | AI-Augmented Full-Stack Engineer" />
+    <meta name="twitter:description"
+        content="Senior Software Engineer specializing in full-stack JavaScript, GenAI, LLM integrations, and microfrontend architecture." />
+    <meta name="twitter:image" content="https://alok722.github.io/img/logo/logo.png" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#fff" />
+    <meta name="theme-color" content="#f0f4ff" />
     <link rel="canonical" href="https://alok722.github.io/" />
-    <title>Alok Raj | Software Engineer</title>
+    <title>Alok Raj | AI-Augmented Full-Stack Engineer</title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
     <link rel="manifest" href="./manifest.json">
 
-    <!--  Bootstrap css file  -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
-    <!--  font awesome icons  -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="./css/all.min.css">
 
-    <!--  Magnific Popup css file  -->
-    <link rel="stylesheet" href="./dependencies/magnific-popup/dist/magnific-popup.css">
-
-    <!--  Owl-carousel css file  -->
-    <link rel="stylesheet" href="./dependencies/owl-carousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./dependencies/owl-carousel/css/owl.theme.default.min.css">
-
-    <!--  custom css file  -->
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!--  Responsive css file  -->
+    <!-- Responsive -->
     <link rel="stylesheet" href="./css/responsive.css">
-
 </head>
 
 <body id="body">
-    <!--  ======================= Start Header Area ============================== -->
+
+    <!-- ======================= MOBILE NAV — RIGHT SIDE PANEL ============================== -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#" data-mobile-nav>Home</a></li>
+            <li><a href="#experience" data-mobile-nav>Experience</a></li>
+            <li><a href="#skills" data-mobile-nav>Skills</a></li>
+            <li><a href="#testimonials" data-mobile-nav>Testimonials</a></li>
+            <li><a href="https://github.com/alok722" target="_blank" rel="noreferrer">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+        <div class="mobile-nav-theme">
+            <input class="toggle" type="checkbox" checked onclick="toggleTheme()">
+        </div>
+    </div>
+
+    <!-- ======================= NAVIGATION ============================== -->
     <header class="header_area">
         <div class="main-menu">
             <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="top-nav-fixed">
-                <a class="navbar-brand" href="#" style="margin-left: 5%;">
-                    <img src="./img/logo/logo.png" width="60px" alt="logo">
+                <a class="navbar-brand" href="#" style="margin-left: 2%;">
+                    <img src="./img/logo/logo.png" width="50px" alt="Alok Raj Logo">
                 </a>
-                <input class="toggle mobile-show" type="checkbox" checked onclick="toggleTheme()">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fas fa-stream"></i></span>
-                </button>
+                <div class="nav-mobile-actions">
+                    <input class="toggle mobile-show" type="checkbox" checked onclick="toggleTheme()">
+                    <button class="mobile-nav-toggle" id="mobileNavOpen" aria-label="Open menu" type="button">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="mr-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" rel="noreferrer" href="https://github.com/alok722"
@@ -78,7 +114,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="certificates.html"><mark>Certificates</mark></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-theme-toggle">
                             <input class="toggle desktop-show" type="checkbox" checked onclick="toggleTheme()">
                         </li>
                     </ul>
@@ -86,30 +122,44 @@
             </nav>
         </div>
     </header>
-    <!--  ======================= End Header Area ============================== -->
 
-    <!--  ======================= Start Main Area ================================ -->
+    <!-- ======================= MAIN ================================ -->
     <main class="site-main">
 
-        <!--  ======================= Start Banner Area =======================  -->
-        <section class="site-banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 site-title">
-                        <h3 class="title-text text-uppercase">Hey, I am Alok👋</h3>
-                        <h4 class="text-uppercase">I am a <span id="subheading"></span></h4>
-                        <hr>
-                        <p>💻 A computer science 2019 graduate.</p>
-                        <p>🌏 I’m currently working on <a href="https://opendevs.in" rel="noreferrer"
-                                target="_blank">opendevs</a> & <a href="https://dev11.in" rel="noreferrer"
-                                target="_blank">dev11</a>.</p>
-                        <p>🤓 A passionate web developer exploring the edges of full stack <mark>JavaScript</mark>.</p>
-                        <p>😎 Proficient in building end-to-end JavaScript web applications.</p>
-                        <p>💯 Have a strong appetite to learn new technologies in a short span and implement
-                            independently.</p>
-                        <p>🛠 Committed to developing high standards secure web application, great UX, usability with
-                            good coding standards.</p>
-                        <p>
+        <!-- ======================= HERO ======================= -->
+        <section class="hero-section">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-mouse-glow" id="heroGlow"></div>
+
+            <div class="hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12">
+                        <div class="reveal">
+                            <div class="hero-badge">
+                                <span class="badge-dot"></span>
+                                AI-Augmented Engineer
+                            </div>
+                        </div>
+
+                        <p class="hero-greeting reveal stagger-1">Hey, I'm</p>
+
+                        <h1 class="hero-name reveal stagger-2">
+                            Alok <span class="gradient-text">Raj</span>
+                        </h1>
+
+                        <div class="hero-role reveal stagger-3">
+                            <span id="subheading"></span>
+                        </div>
+
+                        <p class="hero-description reveal stagger-4">
+                            Senior Software Engineer with 6+ years building scalable full-stack applications.
+                            Passionate about microfrontend architecture, performance optimization, and
+                            leveraging AI-driven workflows to ship better software faster.
+                        </p>
+
+                        <div class="hero-github-buttons reveal stagger-5">
                             <a class="github-button" href="https://github.com/alok722"
                                 data-color-scheme="no-preference: light; light: dark; dark: light;" data-size="large"
                                 data-show-count="true" aria-label="Follow @alok722 on GitHub">Follow @alok722</a>
@@ -117,798 +167,554 @@
                                 data-color-scheme="no-preference: dark; light: dark; dark: light;"
                                 data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
                                 aria-label="Fork alok722/alokraj.tech on GitHub">Fork</a>
-                        </p>
-                        <hr>
-                        <div class="social">
-                            <a target="_blank" rel="noreferrer" href="https://github.com/alok722" class="social-link"><i
-                                    class="fab fa-github"></i></a>
+                        </div>
+
+                        <div class="hero-buttons reveal stagger-5">
+                            <a href="./assets/Alok_Raj_Resume.pdf" target="_blank" class="btn-primary-custom">
+                                <i class="fas fa-file-alt"></i> Resume
+                            </a>
+                            <a href="mailto:alokr417@gmail.com" class="btn-secondary-custom">
+                                <i class="fas fa-envelope"></i> Get in Touch
+                            </a>
+                        </div>
+
+                        <div class="hero-social reveal stagger-6">
+                            <a target="_blank" rel="noreferrer" href="https://github.com/alok722" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
                             <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/alok722"
-                                class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722"
-                                class="social-link"><i class="fab fa-twitter"></i></a>
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                             <a target="_blank" rel="noreferrer" href="https://instagram.com/alok722_"
-                                class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="mailto:alokr417@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                        <div class="site-buttons">
-                            <div class="d-flex flex-row flex-wrap">
-                                <button type="button" class="btn button primary-button mr-4 text-uppercase first-btn"><a
-                                        href="./assets/Alok_Raj.pdf" target="_blank">RESUME &nbsp;<i
-                                            class="fas fa-external-link-alt" aria-hidden="true"></i></a></button>
-                                <button type="button" class="btn button secondary-button text-uppercase second-btn"><a
-                                        href="tel:+91-8240159173">Hire Me</a></button>
-                            </div>
+                                aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 banner-image">
+
+                    <div class="col-lg-5 col-md-12 hero-visual reveal-scale stagger-3">
                         <lottie-player src="./img/banner/Blogging.json" background="transparent" speed="1" loop
-                            autoplay>
-                        </lottie-player>
+                            autoplay></lottie-player>
                     </div>
                 </div>
             </div>
         </section>
-        <!--  ======================= End Banner Area =======================  -->
 
+        <!-- Wave divider -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 C300,60 900,0 1200,60 L1200,0 L0,0 Z" fill="var(--color-bg)" />
+            </svg>
+        </div>
 
-        <!--  ========================= Start Experience Area ==========================  -->
-        <section class="faq-section py-5" id="experience">
-            <div class="container single-col-max">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <div class="about-title">
-                            <h3 class="text-uppercase title-text" style="font-size: 35px;">Experience</h3>
+        <!-- ======================= EXPERIENCE ======================= -->
+        <section class="experience-section section" id="experience">
+            <div class="container-custom">
+                <h2 class="section-title reveal">Experience</h2>
+                <p class="section-subtitle reveal stagger-1">6+ years building products at scale across enterprise
+                    platforms</p>
+
+                <div class="timeline">
+                    <!-- JLL -->
+                    <div class="timeline-item reveal" data-expanded="true">
+                        <div class="timeline-dot active"></div>
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div>
+                                <div class="timeline-company">JLL (Jones Lang LaSalle) <i
+                                        class="fas fa-chevron-down toggle-icon"></i></div>
+                                <div class="timeline-role">Senior Software Engineer</div>
+                            </div>
+                            <span class="timeline-date">Jun 2022 — Present</span>
                         </div>
-                    </div>
-                </div>
-                <div id="exp-accordion" class="faq-accordion mx-auto">
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-building mr-2"></i>
-                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#experience5" aria-expanded="false">
-                                    <i class="fas fa-chevron-up"></i>
-                                    JLL (<i>Software Engineer ll</i>)
-                                </a>
-                                <span>June 2022 - Present</span>
-                            </h4>
-                        </div>
+                        <div class="timeline-body">
+                            <div class="timeline-subtitle">Leading Full-Stack Development</div>
+                            <ul>
+                                <li>Spearheading end-to-end development of <span class="metric-highlight">3 core
+                                        microfrontend modules</span> — MyAnalytics, Dashboard Configuration, & Subscribe
+                                    to Dashboard — serving <span class="metric-highlight">500+ enterprise users</span>
+                                </li>
+                                <li>Delivering features across the stack using React with TypeScript, NestJS,
+                                    PostgreSQL, Redis, and GraphQL — full ownership from UI to API, data modeling, and
+                                    performance optimization</li>
+                                <li>Designing data-rich dashboards combining bar, line, scatter charts, and KPIs for
+                                    real-time CRE insights using Highcharts</li>
+                                <li>Led backend NestJS microservices with PostgreSQL, TypeORM, and Liquibase for
+                                    scalable schema management</li>
+                            </ul>
 
-                        <div class="card-collapse collapse show" id="experience5">
-                            <div class="card-body p-4 bg-white">
-                                <b>Working as a Full stack Javascript Engineer</b>:</b>
-                                <ul>
-                                    <li><b>Product Engineer</b> at JLL Technologies
-                                    </li>
-                                    <li>
-                                        Building JLL <a href="https://www.jllt.com/azara-cre-bi-platform"
-                                            target="_blank">Azara</a> CRE data & insights platform
-                                    </li>
-                                    <li>
-                                        <b>Tech stacks</b>: React.Js with Typescript & Redux, RxJS, CSS
-                                        Modules, SCSS,
-                                        React Testing Library, Jest, i18n
-                                    </li>
-                                </ul>
+                            <div class="timeline-subtitle">Engineering Impact</div>
+                            <ul>
+                                <li>Architected internal MFE CLI tool to bootstrap new apps with pre-configured best
+                                    practices, reducing onboarding time by <span class="metric-highlight">80%</span> and
+                                    improving consistency across <span class="metric-highlight">10+ teams</span></li>
+                                <li>Delivering features across <span class="metric-highlight">10+ MFEs</span> and a host
+                                    container app; collaborating with backend teams via GraphQL & REST</li>
+                                <li>Halved LCP (<span class="metric-highlight">~10s → ~5s</span>) through render
+                                    profiling, bundle optimization, and API refinements</li>
+                                <li>Managed migration of <span class="metric-highlight">25+ GitHub repos</span> and
+                                    Docker images to modern CI/CD pipelines, reducing release overhead by <span
+                                        class="metric-highlight">30%</span></li>
+                                <li>Mentoring junior engineers, conducting PR reviews, speaking at guild sessions, and
+                                    shaping platform strategy</li>
+                            </ul>
+
+                            <div class="timeline-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">NestJS</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Microfrontend</span>
+                                <span class="tech-tag">Highcharts</span>
+                                <span class="tech-tag">Material-UI</span>
+                                <span class="tech-tag">Jest</span>
+                                <span class="tech-tag">Storybook</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-building mr-2"></i>
-                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#experience4" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    Globant (<i>Sr. Software Engineer</i>)
-                                </a>
-                                <span>March 2021 - June 2022</span>
-                            </h4>
-                        </div>
 
-                        <div class="card-collapse collapse" id="experience4">
-                            <div class="card-body p-4 bg-white">
-                                <b>Working as a Web UI Engineer</b>:</b>
-                                <ul>
-                                    <li>Have been working and leading development of cross frameworks UI library using
-                                        <b>StencilJS</b>.</b>
-                                    </li>
-                                    <li>
-                                        Have been working extensively on Banking web application and making it
-                                        <b>accessible</b>.
-                                    </li>
-                                    <li>Been part of project right from discovery phase and led the development of
-                                        initial phase of Micro Front‑end Apps with React.Js using <b>Module Federation
-                                            Approach</b> in Design/Build phase.</li>
-                                    <li>Mentoring freshers and colleagues on new javascript technologies as part of
-                                        Globant’s studio initiative.
-                                    </li>
-                                    <li>
-                                        <b>Tech stacks</b>: React.Js with Typescript & Redux, Angular, RxJS, CSS
-                                        Modules, SCSS,
-                                        React Testing Library, Jest, i18n
-                                    </li>
-                                </ul>
+                    <!-- Globant -->
+                    <div class="timeline-item reveal" data-expanded="false">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div>
+                                <div class="timeline-company">Globant <i
+                                        class="fas fa-chevron-down toggle-icon collapsed"></i></div>
+                                <div class="timeline-role">Software Engineer 2</div>
+                            </div>
+                            <span class="timeline-date">Mar 2021 — Jun 2022</span>
+                        </div>
+                        <div class="timeline-body collapsed-body">
+                            <ul>
+                                <li>Led development of a cross-framework UI library leveraging <span
+                                        class="metric-highlight">StencilJS</span> to deliver reusable, scalable web
+                                    components</li>
+                                <li>Contributed extensively to a banking web application, ensuring compliance with <span
+                                        class="metric-highlight">WCAG accessibility</span> standards</li>
+                                <li>Played a key role from discovery phase to leading development of Micro Frontend
+                                    applications using React.js and <span class="metric-highlight">Module
+                                        Federation</span></li>
+                                <li>Mentored freshers and peers on cutting-edge JavaScript technologies as part of
+                                    Globant's studio initiative</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">StencilJS</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Web Components</span>
+                                <span class="tech-tag">i18n</span>
+                                <span class="tech-tag">Jest</span>
+                                <span class="tech-tag">Accessibility</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-building mr-2"></i>
-                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#experience1" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    TATA CONSULTANCY SERVICES (<i>Software Engineer</i>)
-                                </a>
-                                <span>June 2019 - March 2021</span>
-                            </h4>
-                        </div>
 
-                        <div class="card-collapse collapse" id="experience1">
-                            <div class="card-body p-4 bg-white">
-                                <b>Worked as a MEAN stack developer on projects
-                                    like:</b>
-                                <ul>
-                                    <li>Implemented a scheduler jobs microservice using <b>Node, Express & MongoDB</b>
-                                        to
-                                        automate the manual process of data sync and notification service, also an
-                                        <b>Angular</b> app to display the success/failure of Jobs.
-                                    </li>
-                                    <li>
-                                        Developed an easy‑to‑use SMTP RESTful API server replicating <b>AWS</b> SES
-                                        template
-                                        system using <b>Node, Express & MongoDB</b> which is
-                                        being consumed by different projects within org.
-                                    </li>
-                                    <li>
-                                        Implemented <b>Dynamic</b> form template system using the <b>MEAN</b> stack
-                                        which helped
-                                        reduce development time approximately by 15%.
-                                    </li>
-                                    <li>
-                                        Developed a <b>Mongo</b> migration utility web‑app to help with data
-                                        administration
-                                        tasks using <b>vanilla JavaScript</b> as a POC.
-                                    </li>
-                                    <li>Implemented a TCS internal web‑app using the <b>MEAN</b> stack to manage
-                                        client’s
-                                        projects, allocated resources and Billing related accounts.
-                                    </li>
-                                    <li><b>Tech stacks</b>: Angular 7+, Angular Material, RxJS, Node.Js, Express.Js,
-                                        MongoDB,
-                                        Microservice arch., Mocha, Chai</li>
-                                </ul>
+                    <!-- TCS -->
+                    <div class="timeline-item reveal" data-expanded="false">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div>
+                                <div class="timeline-company">Tata Consultancy Services <i
+                                        class="fas fa-chevron-down toggle-icon collapsed"></i></div>
+                                <div class="timeline-role">Software Engineer</div>
+                            </div>
+                            <span class="timeline-date">Jun 2019 — Mar 2021</span>
+                        </div>
+                        <div class="timeline-body collapsed-body">
+                            <ul>
+                                <li>Designed a scheduler jobs microservice using Node.js, Express & MongoDB to automate
+                                    data synchronization and notification services</li>
+                                <li>Built an SMTP RESTful API server replicating AWS SES's template system, consumed by
+                                    multiple organizational projects</li>
+                                <li>Implemented dynamic form template system using MEAN stack, reducing dev time by
+                                    <span class="metric-highlight">~15%</span></li>
+                                <li>Created a MongoDB migration utility web app as a POC using vanilla JavaScript</li>
+                                <li>Delivered a TCS internal web app using MEAN stack to manage client projects,
+                                    resource allocation, and billing</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">RxJS</span>
+                                <span class="tech-tag">Microservices</span>
+                                <span class="tech-tag">Jest</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-building mr-2"></i>
-                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#experience2" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    GROUPCLAP EDTECH PVT. LTD. (<i>Intern</i>)
-                                </a>
-                                <span>Jan 2019 – March 2019</span>
-                            </h4>
-                        </div>
 
-                        <div class="card-collapse collapse" id="experience2">
-                            <div class="card-body p-4 bg-white">
-                                <b>Worked on various projects like:</b>
-                                <ul>
-                                    <li>Customer facing WordPress and static websites using <b>HTML, CSS &
-                                            Javascript</b>.</li>
-                                    <li>Developed a web app POC to replicate some of the functionalities of Zomato’s
-                                        website.</li>
-                                    <li>Developed the official Android app of GroupClap using Android’s Web View.</li>
-                                    <li><b>Tech stacks</b>: HTML5, CSS3, JavaScript, jQuery, WordPress, Android, PHP.
-                                    </li>
-                                </ul>
+                    <!-- GroupClap -->
+                    <div class="timeline-item reveal" data-expanded="false">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div>
+                                <div class="timeline-company">GroupClap <i
+                                        class="fas fa-chevron-down toggle-icon collapsed"></i></div>
+                                <div class="timeline-role">Software Engineer Intern</div>
+                            </div>
+                            <span class="timeline-date">Jan 2019 — Mar 2019</span>
+                        </div>
+                        <div class="timeline-body collapsed-body">
+                            <ul>
+                                <li>Built and maintained the company's web platform using HTML, CSS, JavaScript, and PHP
+                                    (Laravel)</li>
+                                <li>Worked on frontend UI design, API integration, and database interactions</li>
+                                <li>Contributed to an independent web project aligned with company requirements</li>
+                                <li>Gained hands-on experience in full-stack development and agile workflows</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
                             </div>
                         </div>
                     </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-building mr-2"></i>
-                                <a data-parent="#exp-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#experience3" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    VEDAS TECHNOCRATS PVT. LTD. (<i>Intern</i>)
-                                </a>
-                                <span>Feb 2018 – June 2018</span>
-                            </h4>
-                        </div>
 
-                        <div class="card-collapse collapse" id="experience3">
-                            <div class="card-body p-4 bg-white">
-                                <b>Worked on various projects like:</b>
-                                <ul>
-                                    <li>Developed front‑end of multiple Android apps as per client’s requirement.</li>
-                                    <li>Integrated and consumed APIs & SDKs to make Android apps more functional.</li>
-                                    <li><b>Tech stacks</b>: Android.</li>
-                                </ul>
+                    <!-- Vedas Technocrats -->
+                    <div class="timeline-item reveal" data-expanded="false">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div>
+                                <div class="timeline-company">Vedas Technocrats Pvt. Ltd. <i
+                                        class="fas fa-chevron-down toggle-icon collapsed"></i></div>
+                                <div class="timeline-role">Intern</div>
                             </div>
+                            <span class="timeline-date">Feb 2018 — Jun 2018</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  ========================= End Experience Area ==========================  -->
-
-        <!--  ========================= Start Education Area ==========================  -->
-        <section class="faq-section py-5" id="education">
-            <div class="container single-col-max">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <div class="about-title">
-                            <h3 class="text-uppercase title-text" style="font-size: 35px;">Education</h3>
-                        </div>
-                    </div>
-                </div>
-                <div id="faq-accordion" class="faq-accordion mx-auto">
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-school mr-2"></i>
-                                <a data-parent="#faq-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#education1" aria-expanded="false">
-                                    <i class="fas fa-chevron-up"></i>
-                                    B.TECH (<mark>COMPUTER SCIENCE</mark>) (<i>MCKV INSTITUTE OF ENGINEERING</i>)
-                                </a>
-                                <span>2015 - 2019</span>
-                            </h4>
-                        </div>
-
-                        <div class="card-collapse collapse show" id="education1">
-                            <div class="card-body p-4 bg-white ">
-                                <p>A graduate with an aggregate of 8.08 CGPA having good understanding of Software
-                                    Development Life Cycle.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light ">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-school mr-2"></i>
-                                <a data-parent="#faq-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#education2" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    12TH (<i>TRIDENT PUBLIC SCHOOL</i>)
-                                </a>
-                                <span>2013 - 2015</span>
-                            </h4>
-                        </div>
-
-                        <div class="card-collapse collapse" id="education2">
-                            <div class="card-body p-4 bg-white">
-                                <p>Aggregate of 68.2%, Subject: Maths, Physics, Chemistry, English, Painting</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 mb-4 shadow-sm">
-                        <div class="card-header border-0 p-4 theme-bg-light">
-                            <h4 class="card-title mb-0 exp">
-                                <i class="fas fa-school mr-2"></i>
-                                <a data-parent="#faq-accordion" data-toggle="collapse" class="card-toggle collapsed"
-                                    href="#education3" aria-expanded="false">
-                                    <i class="fas fa-chevron-down"></i>
-                                    10TH (<i>CS DAV PUBLIC SCHOOL</i>)
-                                </a>
-                                <span>~ 2013</span>
-                            </h4>
-                        </div>
-
-                        <div class="card-collapse collapse" id="education3">
-                            <div class="card-body p-4 bg-white">
-                                <p>Aggregate of 10 CGPA (95%)</p>
+                        <div class="timeline-body collapsed-body">
+                            <ul>
+                                <li>Developed front-end of multiple Android apps as per client's requirement</li>
+                                <li>Integrated and consumed APIs & SDKs to make Android apps more functional</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Java</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--  ========================= End Education Area ==========================  -->
 
-        <!--  ========================Start Production Skill Area ==============================  -->
-        <section id="skills">
-            <div class="container">
-                <div class="col-lg-12 text-center services-title">
-                    <h3 class="text-uppercase title-text" style="font-size: 35px;">Production Level Skills</h3>
-                </div>
-                <div class="integration-list row justify-content-center py-5">
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/javascript.svg" alt="javascript">
-                        <p class="skill-label">JavaScript</p>
+        <!-- ======================= SKILLS ======================= -->
+        <section class="skills-section section" id="skills">
+            <div class="container-custom">
+                <h2 class="section-title reveal">Skills & Expertise</h2>
+                <p class="section-subtitle reveal stagger-1">Full-stack engineering meets AI-augmented workflows</p>
+
+                <div class="skills-grid">
+                    <!-- AI & GenAI — FIRST -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label ai-label">
+                            <i class="fas fa-robot"></i> AI & GenAI
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill ai">Generative AI Concepts</span>
+                            <span class="skill-pill ai">Prompt Engineering</span>
+                            <span class="skill-pill ai">LLM Integration</span>
+                            <span class="skill-pill ai">AI-Assisted Dev Workflows</span>
+                            <span class="skill-pill ai">Vector Databases & Embeddings</span>
+                            <span class="skill-pill ai">RAG Fundamentals</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/typescript.svg" alt="TypeScript">
-                        <p class="skill-label">TypeScript</p>
+
+                    <!-- Frontend -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label">
+                            <i class="fas fa-palette"></i> Frontend
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">Angular</span>
+                            <span class="skill-pill">Vue.js</span>
+                            <span class="skill-pill">Next.js</span>
+                            <span class="skill-pill">TypeScript</span>
+                            <span class="skill-pill">Redux</span>
+                            <span class="skill-pill">StencilJS</span>
+                            <span class="skill-pill">Material-UI</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                            <span class="skill-pill">Storybook</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3 / SCSS</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/react.svg" alt="reactJs">
-                        <p class="skill-label">ReactJS</p>
+
+                    <!-- Backend -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label">
+                            <i class="fas fa-server"></i> Backend
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">NestJS</span>
+                            <span class="skill-pill">Express.js</span>
+                            <span class="skill-pill">GraphQL</span>
+                            <span class="skill-pill">REST API</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/vuejs.svg" alt="vuejs">
-                        <p class="skill-label">VueJS</p>
+
+                    <!-- Database & Caching -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label">
+                            <i class="fas fa-database"></i> Database & Caching
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">PostgreSQL</span>
+                            <span class="skill-pill">MongoDB</span>
+                            <span class="skill-pill">Redis</span>
+                            <span class="skill-pill">TypeORM</span>
+                            <span class="skill-pill">Mongoose</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/angular.svg" alt="angular">
-                        <p class="skill-label">Angular</p>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label">
+                            <i class="fas fa-cloud"></i> Cloud & DevOps
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Docker</span>
+                            <span class="skill-pill">CI/CD Pipelines</span>
+                            <span class="skill-pill">Microservices</span>
+                            <span class="skill-pill">Microfrontends</span>
+                            <span class="skill-pill">Module Federation</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/redux.svg" alt="redux">
-                        <p class="skill-label">Redux</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/material-ui.svg" alt="material-ui">
-                        <p class="skill-label">Material UI</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/angular-material.svg"
-                            alt="angular-material">
-                        <p class="skill-label">Angular Material</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/rxjs1.svg" alt="rxjs">
-                        <p class="skill-label">RXJS</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/nodejs.svg" alt="nodejs">
-                        <p class="skill-label">NodeJS</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/expressjs.svg" alt="expressjs">
-                        <p class="skill-label">ExpressJS</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/fastify.svg" alt="fastify">
-                        <p class="skill-label">fastifyJS</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/nestjs.svg" alt="nestJS">
-                        <p class="skill-label">nestJS</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/html.svg" alt="html">
-                        <p class="skill-label">HTML5</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/css.svg" alt="css">
-                        <p class="skill-label">CSS3</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/bootstrap.svg" alt="bootstrap">
-                        <p class="skill-label">Bootstrap</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/mongodb.svg" alt="mongodb">
-                        <p class="skill-label">MongoDB</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/redis.svg" alt="redis">
-                        <p class="skill-label">Redis</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/mysql.svg" alt="mysql">
-                        <p class="skill-label">MySQL</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/docker.svg" alt="docker">
-                        <p class="skill-label">Docker</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/mocha.svg" alt="mocha">
-                        <p class="skill-label">Mocha</p>
+
+                    <!-- Tooling & Testing -->
+                    <div class="skill-category reveal">
+                        <div class="skill-category-label">
+                            <i class="fas fa-tools"></i> Tooling & Testing
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Jest</span>
+                            <span class="skill-pill">Playwright</span>
+                            <span class="skill-pill">React Testing Library</span>
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">Web Accessibility</span>
+                            <span class="skill-pill">PWA</span>
+                            <span class="skill-pill">ESLint</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--  ======================== End Production Skill Area ==============================  -->
 
-        <!--  ========================Start Other Skill Area ==============================  -->
-        <section id="skills">
-            <div class="container">
-                <div class="col-lg-12 text-center services-title">
-                    <h3 class="text-uppercase title-text" style="font-size: 35px;">Other Relevant Skills</h3>
-                </div>
-                <div class="integration-list row justify-content-center py-5">
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/agile.svg" alt="agile">
-                        <p class="skill-label">AGILE</p>
+        <!-- ======================= EDUCATION ======================= -->
+        <section class="education-section section" id="education">
+            <div class="container-custom">
+                <h2 class="section-title reveal">Education</h2>
+                <p class="section-subtitle reveal stagger-1">Academic foundation</p>
+
+                <div class="education-grid">
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h4>B.Tech — Computer Science & Engineering</h4>
+                            <p>MCKV Institute of Engineering, Kolkata</p>
+                            <p>8.08 CGPA — Strong foundation in SDLC, algorithms, and system design</p>
+                            <span class="edu-date">2015 — 2019</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg">
-                        <img class="shadow rounded-circle" src="./img/skills/php.svg" alt="php">
-                        <p class="skill-label">PhP</p>
+                    <div class="education-card reveal stagger-1">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-info">
+                            <h4>12th — Trident Public School</h4>
+                            <p>Aggregate of 68.2% — Maths, Physics, Chemistry, English, Painting</p>
+                            <span class="edu-date">2013 — 2015</span>
+                        </div>
                     </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/android.svg" alt="android">
-                        <p class="skill-label">Android</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/java.svg" alt="java">
-                        <p class="skill-label">Java</p>
-                    </div>
-                    <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5">
-                        <img class="shadow rounded-circle" src="./img/skills/wordpress.svg" alt="wordpress">
-                        <p class="skill-label">Wordpress</p>
+                    <div class="education-card reveal stagger-2">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-info">
+                            <h4>10th — CS DAV Public School</h4>
+                            <p>Aggregate of 10 CGPA (95%)</p>
+                            <span class="edu-date">~ 2013</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--  ======================== End Skill Area ==============================  -->
 
-        <!--  ======================== Start LinkedIn Recommendations ==============================  -->
-        <section class="about-area" id="recommendations">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <div class="about-title">
-                            <h3 class="text-uppercase title-text" style="font-size: 35px;">Testimonials</h3>
-                        </div>
+        <!-- ======================= TESTIMONIALS ======================= -->
+        <section class="testimonials-section section" id="testimonials">
+            <div class="container-custom">
+                <h2 class="section-title reveal">What People Say</h2>
+                <p class="section-subtitle reveal stagger-1">Testimonials from colleagues and managers</p>
+
+                <div class="testimonials-stack-wrapper reveal-scale stagger-2">
+                    <button class="stack-btn stack-btn-prev" id="stackPrev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonials-stack-container" id="testimonialStack">
+                        <!-- Cards rendered via JS -->
                     </div>
+                    <button class="stack-btn stack-btn-next" id="stackNext" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <span class="stack-counter" id="stackCounter">1 / 15</span>
                 </div>
             </div>
-
-            <div class="container carousel py-lg-5">
-                <div class="owl-carousel owl-theme">
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/alberto.jpg" alt="Alberto Chamorro" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Alberto Chamorro</h4>
-                            <p>*Alberto was senior to Alok</p>
-                            <p class="para">Alok is a great professional, always willing to learn. He is a person you
-                                can talk to, always willing to help. He is a
-                                fast learner and very talented.
-                                <br><br>
-                                Connect with Alberto<a href="https://www.linkedin.com/in/alberto-chamorro/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/jayshri-patil.jpg" alt="Jayshri Patil" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Jayshri Patil</h4>
-                            <p>*Jayshri worked with Alok on the same team</p>
-                            <p class="para">Congratulations Alok for new Job. I must say that I am not at all surprised.
-                                Your keen intelligence and creative problem
-                                solving skills have always set you apart from the crowd. It’s been a pleasure working
-                                with you.
-                                <br><br>
-                                Connect with Jayshri <a href="https://www.linkedin.com/in/jayshri-patil/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/priya-pal.jpg" alt="Priya Pal" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Priya Pal</h4>
-                            <p>*Priya and Alok studied together</p>
-                            <p class="para">I have worked with Alok in various small projects during our Undergraduate
-                                course. I have learned that Alok is
-                                hardworking and someone you can count on as a teammate. He improved throughout his
-                                college years. His improvement was
-                                not only academic but he also improved his practical knowledge by participating in
-                                various coding challenges.
-                                <br><br>
-                                Connect with Priya <a href="https://www.linkedin.com/in/priya-p-b80a1294/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/sravan.jpg" alt="Sravan Kumar" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Sravan Kumar</h4>
-                            <p>*Sravan with Alok on the same team</p>
-                            <p class="para">Alok is that friend and teammate whom anyone wishes to have. You can talk
-                                with him on Tech all day. A javascript
-                                enthusiast and really enjoyed working with him on some cool web projects.
-                                <br><br>
-                                Connect with Sravan <a href="https://www.linkedin.com/in/sravankumar23/" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/rhaynel-parra.jpg" alt="Rhaynel Parra" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Rhaynel Parra Aguiar</h4>
-                            <p>*Rhaynel managed Alok directly</p>
-                            <p class="para">Professionals are persons that profess their skill to others and vow to
-                                perform their craft to the highest known standard. That is the way Alok behaves every
-                                day with such a passion for what he does and pushing himself to be always a better
-                                software developer and a better person. it is a real pleasure to work with him.
-                                <br><br>
-                                Connect with Rhaynel <a href="https://www.linkedin.com/in/rhaynel/" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/pawan.jpg" alt="Pawan Gondane" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Pawan Gondane</h4>
-                            <p>*Pawan managed Alok directly</p>
-                            <p class="para">Alok left a profound impression merely within a few months of working with
-                                him. His knowledge base is solid, attention to detail is excellent, and more than
-                                anything his work ethics and attitude are phenomenal. I knew Alok during last last few
-                                months with TCS and he was worming on a very critical PoC for us right until his second
-                                last day - he completed all his assignments diligently, made sure he transitioned the
-                                knowledge to team members and made us thankful to him, and also sad to see him go. I am
-                                sure he will do wonderfully in life. Best wishes to you Alok :)
-                                <br>
-                                Connect with Pawan <a href="https://www.linkedin.com/in/pawan-gondane-0678b375/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                                <br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/rajeshwari.jpg" alt="Rajeshwari Chapparad" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Rajeshwari Chapparad</h4>
-                            <p>*Rajeshwari worked with Alok on the same team</p>
-                            <p class="para">I had the pleasure of working with Alok for nearly 2 years at TCS,
-                                collaborating on several project teams. He always
-                                brings the positive environment and guides the juniors to pick the phase.
-                            </p>
-                            Connect with Rajeshwari <a
-                                href="https://www.linkedin.com/in/rajeshwari-chapparad-a89806201/" target="_blank"
-                                rel="noopener noreferrer">here</a>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/mihir.jpg" alt="Mihir Kumar" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Mihir Kumar</h4>
-                            <p>*Mihir and Alok did college together</p>
-                            <p class="para">Alok is a punctal, talented, passionate but what makes him ideal for any
-                                role is hardwork. No matter what it is he will always give 100% of his potential. He is
-                                known to be detail oriented and for quickly grasping working knowledge of anything.
-                                If you want anyone who can pursue any responsibility and can perfectly rely on him
-                                choose this person as priority. He will get it done in the best way that's for sure.
-                                <br><br>
-                                Connect with Mihir <a href="https://www.linkedin.com/in/mikr13/" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                <br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/udit.jpg" alt="Udit Jain" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Udit Jain</h4>
-                            <p>*Udit and Alok worked together at TCS</p>
-                            <p class="para">
-                                Alok is one of the most passionate JS developers.
-                                I have worked with him for more than a year and I can vow for his skills, his dedication
-                                and his capability of finishing a project. He takes the ownership of the project and
-                                makes sure, it is delivered at the right time with all the best industrial practices and
-                                standards.
-                                <br><br>
-                                Connect with Udit <a href="https://www.linkedin.com/in/udit94125/" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                <br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/raunak.jpg" alt="Raunak Chatterjee" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Raunak Chatterjee</h4>
-                            <p>*Raunak managed Alok directly</p>
-                            <p class="para">Alok Raj has been a real pleasure to work with. Alok Raj did an exceptional
-                                job on projects that we worked together on. Passionate, great and creative co-worker.
-                                Detail oriented, intelligent, deadline oriented and broad-minded employee; has vast
-                                knowledge and is thorough. Thanks to interpersonal skills, Alok Raj has great relations
-                                with both company clients and potential customers. Is able to work in a fast-paced
-                                environment. Highly recommended</p>
-                            Connect with Raunak <a href="https://www.linkedin.com/in/raunak-chatterjee/" target="_blank"
-                                rel="noopener noreferrer">here</a>
-                            <br><br>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/avinash.jpg" alt="Avinash Dwivedi" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Avinash Dwivedi</h4>
-                            <p>*Avinash managed Alok directly</p>
-                            <p class="para">Alok Raj is a very professional and amazing full stack developer.
-                                <br><br>
-                                Connect with Avinash <a href="https://www.linkedin.com/in/avinash-dwivedi/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                                <br>
-                                <br><br><br><br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/ayush.jpg" alt="Ayush" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Ayush singh kushwaha</h4>
-                            <p>*Ayush worked with Alok at diff comp.</p>
-                            <p class="para">Alok is a great professional developer. He always comes up with creative
-                                solutions to difficult problems. He has excellent communication skills and is willing to
-                                help when needed. Anyone would be lucky to have Alok has a colleague.
-                                <br><br>
-                                Connect with Ayush <a href="https://www.linkedin.com/in/ayushsingh9/" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                <br><br><br><br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./img/testimonials/vishal.jpg" alt="Vishal" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Vishal Singla</h4>
-                            <p>*Vishal worked with Alok at diff comp.</p>
-                            <p class="para">Alok Raj is such a nice person to have around. He is not only a great
-                                colleague but also a very good javascript developer with over 3 years of valuable
-                                experience.
-                                He is very creative, hands-on, and organized. He is the guy to go to when you need help
-                                with javascript or any another programming related issue and is always open to discuss
-                                ideas and suggestions.
-                                I learned a lot about leadership from Alok Raj, and it was a pleasure to be managed by
-                                him.
-                                <br><br>
-                                Connect with Vishal <a href="https://www.linkedin.com/in/vishalsingla34/"
-                                    target="_blank" rel="noopener noreferrer">here</a>
-                            </p><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </section>
-        <!--  ======================== End LinkedIn Recommendations ==============================  -->
+
+        <!-- ======================= YOUTUBE ======================= -->
+        <section class="youtube-section reveal">
+            <a href="https://www.youtube.com/@opendevs" target="_blank" rel="noopener noreferrer" class="youtube-strip">
+                <i class="fab fa-youtube youtube-strip-icon"></i>
+                <span class="youtube-strip-text">
+                    <strong>OpenDevs</strong> &mdash; 3K+ subscribers &bull; OSS & Software Engineering
+                </span>
+                <span class="youtube-strip-arrow"><i class="fas fa-external-link-alt"></i></span>
+            </a>
+        </section>
 
     </main>
-    <!--  ======================= End Main Area ================================ -->
 
+    <!-- Footer wave divider -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 C300,60 600,0 900,30 C1050,45 1150,20 1200,30 L1200,60 L0,60 Z" fill="#0f172a" />
+        </svg>
+    </div>
+
+    <!-- ======================= FOOTER ======================= -->
     <footer class="footer-area">
-        <div class="container">
-            <div class="">
-                <div class="site-logo text-center py-4">
-                    <img src="./img/logo/logo.png" width="60px" alt="logo">
-                </div>
-                <div class="text-center">
-                    <h5 class="text-uppercase">Connect me on</h5>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/alok722" class="social social-link"><i
-                            class="fab fa-github"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alok722/"
-                        class="social social-link"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722" class="social social-link"><i
-                            class="fab fa-twitter"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/alok722"
-                        class="social social-link"><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/alok722_/"
-                        class="social social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:alokr417@gmail.com" class="social social-link"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="copyrights text-center">
-                    <p class="para">
-                        || made with ❤️️ in 🇮🇳 ||
-                    </p>
-                    <p>
-                        <!-- Place this tag where you want the button to render. -->
-                        <a class="github-button" href="https://github.com/alok722/alokraj.tech/fork"
-                            data-color-scheme="no-preference: dark; light: dark; dark: light;"
-                            data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
-                            aria-label="Fork alok722/alokraj.tech on GitHub">Fork</a>
-                    </p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./img/logo/logo.png" alt="Alok Raj Logo">
+            </div>
+            <h5 class="footer-title">Connect me on</h5>
+            <div class="footer-social">
+                <a target="_blank" rel="noreferrer" href="https://github.com/alok722" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alok722/" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/alok722" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/alok722_/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:alokr417@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-copy">
+                <p>|| made with ❤️️ in 🇮🇳 ||</p>
+            </div>
+            <div class="footer-fork">
+                <a class="github-button" href="https://github.com/alok722/alokraj.tech/fork"
+                    data-color-scheme="no-preference: dark; light: dark; dark: light;" data-icon="octicon-repo-forked"
+                    data-size="large" data-show-count="true" aria-label="Fork alok722/alokraj.tech on GitHub">Fork</a>
             </div>
         </div>
     </footer>
 
     <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- ======================= SCRIPTS ======================= -->
+
+    <!-- Theme toggle (inline, must run early) -->
     <script>
-        let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
-        if (theme == 'light') {
-            document.getElementsByClassName('toggle')[0].checked = true;
-            document.getElementsByClassName('toggle')[1].checked = true;
-        } else {
-            document.getElementsByClassName('toggle')[0].checked = false;
-            document.getElementsByClassName('toggle')[1].checked = false;
+        let theme = localStorage.getItem("portfolio-theme") || 'light';
+        function syncToggles() {
+            const toggles = document.getElementsByClassName('toggle');
+            for (let t of toggles) t.checked = (theme === 'light');
         }
+        syncToggles();
         document.addEventListener('DOMContentLoaded', () => {
-            if (theme == 'light') {
-                document.getElementById("body").classList.remove('dark');
-            }
-            else {
+            if (theme === 'dark') {
                 document.getElementById("body").classList.add('dark');
             }
+            syncToggles();
         });
 
         function toggleTheme() {
-            if (theme == 'light') {
-                document.getElementById("body").classList.add('dark');
+            const body = document.getElementById("body");
+            if (theme === 'light') {
+                body.classList.add('dark');
                 theme = 'dark';
                 localStorage.setItem("portfolio-theme", 'dark');
-            }
-            else {
-                document.getElementById("body").classList.remove('dark');
+            } else {
+                body.classList.remove('dark');
                 theme = 'light';
                 localStorage.setItem("portfolio-theme", 'light');
+            }
+            syncToggles();
+        }
+
+        function toggleTimeline(headerEl) {
+            const item = headerEl.closest('.timeline-item');
+            const body = item.querySelector('.timeline-body');
+            const icon = item.querySelector('.toggle-icon');
+            const isExpanded = item.dataset.expanded === 'true';
+
+            if (isExpanded) {
+                body.classList.add('collapsed-body');
+                icon.classList.add('collapsed');
+                item.dataset.expanded = 'false';
+            } else {
+                body.classList.remove('collapsed-body');
+                icon.classList.remove('collapsed');
+                item.dataset.expanded = 'true';
             }
         }
     </script>
 
+    <!-- Typewriter -->
     <script src="./dependencies/Typewriter/typewriter.min.js"></script>
-
     <script>
         var typewriter = new Typewriter('#subheading', {
-            strings: ['SOFTWARE ENGINEER', 'FULL STACK DEVELOPER', 'MERN STACK DEVELOPER', 'MEAN STACK DEVELOPER'],
+            strings: [
+                'SENIOR SOFTWARE ENGINEER',
+                'AI-AUGMENTED FULL-STACK DEVELOPER',
+                'MICROFRONTEND ARCHITECT',
+                'OPEN SOURCE CONTRIBUTOR'
+            ],
             autoStart: true,
             loop: true,
         });
     </script>
 
-    <!--  Jquery js file  -->
+    <!-- jQuery (Bootstrap 4 dependency) -->
     <script defer src="./js/jquery.3.4.1.js"></script>
 
-    <!--  Bootstrap js file  -->
+    <!-- Bootstrap JS -->
     <script defer src="./js/bootstrap.min.js"></script>
 
+    <!-- Font Awesome -->
     <script defer src="./js/all.min.js"></script>
 
-    <!--  isotope js library  -->
-    <script defer src="./dependencies/isotope/isotope.min.js"></script>
-
-    <!--  Magnific popup script file  -->
-    <script defer src="./dependencies/magnific-popup/dist/jquery.magnific-popup.js"></script>
-
-    <!--  Owl-carousel js file  -->
-    <script defer src="./dependencies/owl-carousel/js/owl.carousel.min.js"></script>
-
-    <!--  custom js file  -->
+    <!-- Custom JS -->
     <script defer src="./js/main.js"></script>
 
+    <!-- GitHub Buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <!-- lottie-player -->
+    <!-- Lottie Player -->
     <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 

@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="title" content="Alok Raj | Software Engineer">
+    <meta name="title" content="Alok Raj | Certificates & Awards | AI-Augmented Full-Stack Engineer">
     <meta name="description"
-        content="a portfolio to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations.">
+        content="Certificates and awards earned by Alok Raj — Senior Software Engineer specializing in full-stack JavaScript, React, Node.js, AI-augmented development, and Generative AI workflows.">
     <meta name="keywords"
-        content="software engineer, alok raj, Alok Raj, Alok raj, javascript developer, Alok developer, Alok Javascript developer, MEAN stack developer, Alok MEAN stack developer, full stack javascript developer, Alok full stack javascript developer, alok722, alok raj alok722">
+        content="software engineer certificates, alok raj, AI engineer, full stack developer, generative AI, javascript developer, react developer, LLM integration, prompt engineering, awards, TCS, Globant, coursera, udemy, performance awards">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="Alok Raj">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://alok722.github.io/" />
+    <meta property="og:url" content="https://alok722.github.io/certificates.html" />
+    <meta property="og:title" content="Alok Raj | Certificates & Awards" />
     <meta property="og:description"
-        content="a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations." />
+        content="Certificates and awards showcasing Alok Raj's expertise in full-stack development, AI-augmented workflows, and software engineering." />
+    <meta property="og:image" content="https://alok722.github.io/img/logo/logo.png" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -54,32 +56,51 @@
 
 <body id="body">
     <button onclick="scrollToTop()" id="scroll-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-    <!--  ======================= Start Header Area ============================== -->
+    <!-- ======================= MOBILE NAV — RIGHT SIDE PANEL ============================== -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="/" data-mobile-nav>Home</a></li>
+            <li><a href="https://github.com/alok722" target="_blank" rel="noreferrer">Projects</a></li>
+            <li><a href="#certificates" data-mobile-nav>Certificates</a></li>
+        </ul>
+        <div class="mobile-nav-theme">
+            <input class="toggle" type="checkbox" checked onclick="toggleTheme()">
+        </div>
+    </div>
+
+    <!-- ======================= NAVIGATION ============================== -->
     <header class="header_area">
         <div class="main-menu">
             <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="top-nav-fixed">
-                <a class="navbar-brand" href="/" style="margin-left: 5%;">
-                    <img src="./img/logo/logo.png" width="60px" alt="logo">
+                <a class="navbar-brand" href="/" style="margin-left: 2%;">
+                    <img src="./img/logo/logo.png" width="50px" alt="Alok Raj Logo">
                 </a>
-                <input class="toggle mobile-show" type="checkbox" checked onclick="toggleTheme()">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fas fa-stream"></i></span>
-                </button>
+                <div class="nav-mobile-actions">
+                    <input class="toggle mobile-show" type="checkbox" checked onclick="toggleTheme()">
+                    <button class="mobile-nav-toggle" id="mobileNavOpen" aria-label="Open menu" type="button">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="mr-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/alok722"
+                            <a class="nav-link" rel="noreferrer" href="https://github.com/alok722"
                                 target="_blank"><mark>Projects</mark></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#certificates">Certificates</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-theme-toggle">
                             <input class="toggle desktop-show" type="checkbox" checked onclick="toggleTheme()">
                         </li>
                     </ul>
@@ -87,7 +108,6 @@
             </nav>
         </div>
     </header>
-    <!--  ======================= End Header Area ============================== -->
 
     <!--  ======================= Start Main Area ================================ -->
     <main class="site-main">
@@ -99,9 +119,9 @@
                         Awards</h3>
                 </div>
 
-                <div class="button-group">
-                    <button type="button" class="active" id="btn1" data-filter="*"
-                        style="color: #007bff;font-weight: bold;">All</button>
+                <div class="button-group" id="filterGroup">
+                    <button type="button" class="active" data-filter="*">All</button>
+                    <button type="button" data-filter=".jll">JLL/T</button>
                     <button type="button" data-filter=".globant">Globant</button>
                     <button type="button" data-filter=".tcs">TCS</button>
                     <button type="button" data-filter=".coursera">Coursera</button>
@@ -113,6 +133,45 @@
                 </div>
 
                 <div class="row grid">
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item jll">
+                        <div class="our-project">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/certificates/jll-1.jpeg">
+                                    <img src="./img/certificates/jll-1.jpeg" alt="jll-certificate-1" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">JLL/T Award</h4>
+                                <span class="text-secondary">JLL (Jones Lang LaSalle)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item jll">
+                        <div class="our-project">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/certificates/jll-2.jpeg">
+                                    <img src="./img/certificates/jll-2.jpeg" alt="jll-certificate-2" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">JLL/T Award</h4>
+                                <span class="text-secondary">JLL (Jones Lang LaSalle)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 element-item jll">
+                        <div class="our-project">
+                            <div class="img">
+                                <a class="test-popup-link" href="./img/certificates/jll-3.jpeg">
+                                    <img src="./img/certificates/jll-3.jpeg" alt="jll-certificate-3" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="title py-4">
+                                <h4 class="text-uppercase">JLL/T Award</h4>
+                                <span class="text-secondary">JLL (Jones Lang LaSalle)</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 element-item globant">
                         <div class="our-project">
                             <div class="img">
@@ -636,96 +695,179 @@
     </main>
     <!--  ======================= End Main Area ================================ -->
 
+    <!-- Footer wave divider -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 C300,60 600,0 900,30 C1050,45 1150,20 1200,30 L1200,60 L0,60 Z" fill="#0f172a"/>
+        </svg>
+    </div>
+
     <footer class="footer-area">
-        <div class="container">
-            <div class="">
-                <div class="site-logo text-center py-4">
-                    <img src="./img/logo/logo.png" width="60px" alt="logo">
-                </div>
-                <div class="text-center">
-                    <h5 class="text-uppercase">Connect me on</h5>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/alok722" class="social social-link"><i
-                            class="fab fa-github"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alok722/"
-                        class="social social-link"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722" class="social social-link"><i
-                            class="fab fa-twitter"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/alok722"
-                        class="social social-link"><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/alok722_/"
-                        class="social social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:alokr417@gmail.com" class="social social-link"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="copyrights text-center">
-                    <p class="para">
-                        || made with ❤️️ in 🇮🇳 ||
-                    </p>
-                    <p>
-                        <!-- Place this tag where you want the button to render. -->
-                        <a class="github-button" href="https://github.com/alok722/alokraj/fork"
-                            data-color-scheme="no-preference: dark; light: dark; dark: light;"
-                            data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
-                            aria-label="Fork alok722/alokraj on GitHub">Fork</a>
-                    </p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./img/logo/logo.png" alt="Alok Raj Logo">
+            </div>
+            <h5 class="footer-title">Connect me on</h5>
+            <div class="footer-social">
+                <a target="_blank" rel="noreferrer" href="https://github.com/alok722" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alok722/" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/alok722" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/alok722" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/alok722_/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:alokr417@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-copy">
+                <p>|| made with ❤️️ in 🇮🇳 ||</p>
+            </div>
+            <div class="footer-fork">
+                <a class="github-button" href="https://github.com/alok722/alokraj.tech/fork"
+                    data-color-scheme="no-preference: dark; light: dark; dark: light;"
+                    data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+                    aria-label="Fork alok722/alokraj.tech on GitHub">Fork</a>
             </div>
         </div>
     </footer>
 
     <script>
-        let theme = localStorage.getItem("portfolio-theme") ? localStorage.getItem("portfolio-theme") : 'light';
-        if (theme == 'light') {
-            document.getElementsByClassName('toggle')[0].checked = true;
-            document.getElementsByClassName('toggle')[1].checked = true;
-        } else {
-            document.getElementsByClassName('toggle')[0].checked = false;
-            document.getElementsByClassName('toggle')[1].checked = false;
+        let theme = localStorage.getItem("portfolio-theme") || 'light';
+        function syncToggles() {
+            const toggles = document.getElementsByClassName('toggle');
+            for (let t of toggles) t.checked = (theme === 'light');
         }
+        syncToggles();
         document.addEventListener('DOMContentLoaded', () => {
-            if (theme == 'light') {
-                document.getElementById("body").classList.remove('dark');
-            }
-            else {
+            if (theme === 'dark') {
                 document.getElementById("body").classList.add('dark');
+            }
+            syncToggles();
+
+            // Mobile nav — right slide panel
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+            const mobileNavOpen = document.getElementById('mobileNavOpen');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            const mobileNavLinks = document.querySelectorAll('[data-mobile-nav]');
+
+            function openMobileNav() {
+                if (mobileNav) mobileNav.classList.add('open');
+                if (mobileNavBackdrop) mobileNavBackdrop.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMobileNav() {
+                if (mobileNav) mobileNav.classList.remove('open');
+                if (mobileNavBackdrop) mobileNavBackdrop.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileNavOpen) mobileNavOpen.addEventListener('click', openMobileNav);
+            if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+            if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
+            mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileNav));
+
+            // Filter button active state
+            const filterGroup = document.getElementById('filterGroup');
+            if (filterGroup) {
+                filterGroup.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'BUTTON') {
+                        filterGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+                        e.target.classList.add('active');
+                    }
+                });
+            }
+
+            // Scroll to top
+            const scrollBtn = document.getElementById('scroll-btn');
+            if (scrollBtn) {
+                window.addEventListener('scroll', () => {
+                    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                        scrollBtn.classList.add('visible');
+                    } else {
+                        scrollBtn.classList.remove('visible');
+                    }
+                }, { passive: true });
             }
         });
 
         function toggleTheme() {
-            if (theme == 'light') {
-                document.getElementById("body").classList.add('dark');
-                document.getElementsByClassName("theme-change-icon").src = "./img/light-theme-icon.png";
+            const body = document.getElementById("body");
+            if (theme === 'light') {
+                body.classList.add('dark');
                 theme = 'dark';
                 localStorage.setItem("portfolio-theme", 'dark');
-            }
-            else {
-                document.getElementById("body").classList.remove('dark');
-                document.getElementsByClassName("theme-change-icon").src = "./img/dark-theme-icon.png";
+            } else {
+                body.classList.remove('dark');
                 theme = 'light';
                 localStorage.setItem("portfolio-theme", 'light');
             }
+            syncToggles();
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
 
     <!--  Jquery js file  -->
-    <script defer src="./js/jquery.3.4.1.js"></script>
+    <script src="./js/jquery.3.4.1.js"></script>
 
     <!--  Bootstrap js file  -->
-    <script defer src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
     <script defer src="./js/all.min.js"></script>
 
     <!--  isotope js library  -->
-    <script defer src="./dependencies/isotope/isotope.min.js"></script>
+    <script src="./dependencies/isotope/isotope.min.js"></script>
 
     <!--  Magnific popup script file  -->
-    <script defer src="./dependencies/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="./dependencies/magnific-popup/dist/jquery.magnific-popup.js"></script>
 
-    <!--  Owl-carousel js file  -->
-    <script defer src="./dependencies/owl-carousel/js/owl.carousel.min.js"></script>
+    <!-- Certificates page init (isotope + magnific popup) -->
+    <script>
+        $(function() {
+            // Isotope grid
+            var $grid = $('.grid').isotope({
+                itemSelector: '.element-item',
+                layoutMode: 'fitRows',
+                percentPosition: true
+            });
 
-    <!--  custom js file  -->
-    <script defer src="./js/main.js"></script>
+            $('#filterGroup').on('click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
+
+            // Magnific Popup
+            $('.test-popup-link').magnificPopup({
+                type: 'image',
+                gallery: { enabled: true }
+            });
+
+            // Nav scroll effect
+            var nav = document.getElementById('top-nav-fixed');
+            if (nav) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 50) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+                }, { passive: true });
+            }
+        });
+    </script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 

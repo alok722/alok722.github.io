@@ -1,22 +1,178 @@
+/* ===== Design System Tokens ===== */
 html,
 body {
-    margin: 0%;
+    margin: 0;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
 }
 
-/* CSS Variables */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
-    --primary-color: #4458dc;
-    --primary-color2: #854fee;
-    --title-color: #141313;
-    --text-color: #353535;
-    --border-color: #201f1f17;
-    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
-    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-    /* font family variables. */
-    --roboto: 'Kodchasan', sans-serif;;
+    /* ---- Colors ---- */
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f1f5f9;
+    --color-text: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-border: #e2e8f0;
+
+    /* Accent */
+    --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
+    --color-primary-light: #60a5fa;
+    --color-primary-glow: rgba(59, 130, 246, 0.25);
+    --color-secondary: #8b5cf6;
+    --color-secondary-dark: #7c3aed;
+    --color-accent: #06b6d4;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --gradient-hero: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 50%, #f0f4ff 100%);
+    --gradient-hero-text: #0f172a;
+    --gradient-hero-muted: #334155;
+    --gradient-mesh: radial-gradient(at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                     radial-gradient(at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                     radial-gradient(at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+    --gradient-text: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    --gradient-footer: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
+    --footer-text: #e2e8f0;
+    --footer-muted: #94a3b8;
+    --footer-border: rgba(255, 255, 255, 0.08);
+    --footer-social-bg: rgba(255, 255, 255, 0.05);
+    --footer-social-border: rgba(255, 255, 255, 0.1);
+    --footer-social-color: #94a3b8;
+    --hero-orb-opacity: 0.08;
+    --hero-social-bg: rgba(30, 41, 59, 0.05);
+    --hero-social-border: rgba(30, 41, 59, 0.1);
+    --hero-social-color: #64748b;
+    --hero-btn-secondary-bg: var(--color-surface);
+    --hero-btn-secondary-border: var(--color-border);
+    --hero-btn-secondary-color: var(--color-text);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 50px -12px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.2);
+
+    /* ---- Typography ---- */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    /* ---- Spacing ---- */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* ---- Layout ---- */
+    --max-width: 1200px;
+    --nav-height: 72px;
+
+    /* ---- Borders ---- */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* ---- Transitions ---- */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+
+    /* ---- Z-index ---- */
+    --z-nav: 1000;
+    --z-modal: 1100;
+    --z-tooltip: 1200;
+
+    /* Legacy compat (used by Bootstrap overrides) */
+    --primary-color: #3b82f6;
+    --primary-color2: #8b5cf6;
+    --title-color: #1e293b;
+    --text-color: #64748b;
+    --border-color: #e2e8f0;
+    --gradient-color: var(--gradient-primary);
+    --shadow-color: var(--shadow-glow);
+    --box-shadow: var(--shadow-lg);
+    --roboto: var(--font-sans);
+}
+
+/* ---- Dark Theme Tokens ---- */
+.dark {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-surface-alt: #334155;
+    --color-text: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 50px -12px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.15);
+
+    --gradient-hero: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
+    --gradient-hero-text: #f1f5f9;
+    --gradient-hero-muted: #cbd5e1;
+    --gradient-mesh: radial-gradient(at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                     radial-gradient(at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                     radial-gradient(at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+    --gradient-footer: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
+    --footer-text: #f1f5f9;
+    --footer-muted: #cbd5e1;
+    --footer-border: rgba(255, 255, 255, 0.08);
+    --footer-social-bg: rgba(255, 255, 255, 0.05);
+    --footer-social-border: rgba(255, 255, 255, 0.1);
+    --footer-social-color: #cbd5e1;
+    --hero-orb-opacity: 0.15;
+    --hero-social-bg: rgba(255, 255, 255, 0.05);
+    --hero-social-border: rgba(255, 255, 255, 0.1);
+    --hero-social-color: #cbd5e1;
+    --hero-btn-secondary-bg: rgba(255, 255, 255, 0.05);
+    --hero-btn-secondary-border: rgba(255, 255, 255, 0.15);
+    --hero-btn-secondary-color: #fff;
 }

@@ -1,50 +1,72 @@
-<h1 align="center">welcome to my portfolio 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-3.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/open-devs/fastify-typescript-generator/graphs/commit-activity" target="_blank">
+<h1 align="center">Alok Raj — AI-Augmented Full-Stack Engineer 👋</h1>
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-4.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/alok722/alok722.github.io/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-blue.svg" />
   </a>
-  <a href="https://github.com/open-devs/fastify-typescript-generator/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/open-devs/fastify-typescript-generator" />
+  <a href="https://github.com/alok722/alok722.github.io/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/alok722/alok722.github.io" />
   </a>
 </p>
 
-### 🏠 [homepage](https://alok722.github.io/)
+### 🏠 [Live Site](https://alok722.github.io/)
 
-## install
+## What is it
+
+A modern, responsive portfolio website for **Alok Raj** — Senior Software Engineer with 6+ years of experience in full-stack JavaScript, microfrontend architecture, and AI-augmented development workflows.
+
+### Features
+
+- **Dark / Light theme** with smooth transitions and full coverage (hero, footer, all sections)
+- **Right-side curvy slide panel** for mobile navigation
+- **Stacked testimonial cards** with slide animation, swipe support, and autoplay
+- **Collapsible experience timeline** — first entry expanded by default
+- **Skills section** organized by category with AI & GenAI prioritized
+- **Education section** with responsive card layout
+- **YouTube strip** linking to [OpenDevs](https://www.youtube.com/@opendevs)
+- **Certificates page** with Isotope filterable grid and Magnific Popup lightbox
+- **SEO-optimized** meta & OG tags with AI/GenAI/LLM keywords
+- **PWA-ready** with service worker caching
+- **Scroll-triggered reveal animations** via Intersection Observer
+- **Fully vanilla** HTML, CSS, JavaScript (no build step required)
+
+### Tech Stack
+
+`HTML5` · `CSS3 (Custom Properties)` · `Vanilla JavaScript` · `Bootstrap 4 Grid` · `Font Awesome` · `Typewriter.js` · `Lottie` · `Isotope.js` · `Magnific Popup`
+
+## Install
 
 ```sh
 git clone https://github.com/alok722/alok722.github.io.git
 ```
 
-## usage
+## Usage
 
 ```sh
 open index.html
 ```
 
-## ❓ what is it
+Or serve locally:
 
-a webpage to showcase my experience, education, skill-set, projects, certificates, achievements and recommendations.
+```sh
+python3 -m http.server 8888
+```
 
-## 👤 author
+## 👤 Author
 
-**alok raj (alokr417@gmail.com)**
+**Alok Raj** (alokr417@gmail.com)
 
-- website: https://alok722.github.io/
-- linkedin: [@alok722](https://linkedin.com/in/alok722)
+- Website: [alok722.github.io](https://alok722.github.io/)
+- LinkedIn: [@alok722](https://linkedin.com/in/alok722)
+- GitHub: [@alok722](https://github.com/alok722)
+- YouTube: [OpenDevs](https://www.youtube.com/@opendevs)
 
-## 🚀 future scope
+## Show your support
 
-- adding blog section
-- adding contact me section
+Give a ⭐️ if you like this portfolio or are using it as a template.
 
-## show your support
+## 📝 License
 
-give a ⭐️ if you are using this template for your webpage.
-
-## 📝 license
-
-This project is [MIT](https://github.com/alok722/alokraj/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/alok722/alok722.github.io/blob/master/LICENSE) licensed.
 
 ---

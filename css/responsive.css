@@ -1,85 +1,304 @@
-/* if the viewport is equal to 340px or less than that */
-@media only screen and (max-width: 340px) {
+/* ===== Responsive Breakpoints ===== */
 
-    .header_area .main-menu .navbar,
-    .header_area .main-menu .navbar .navbar-brand,
-    .site-main .subscribe-us-area .subscribe .subscribe-title,
-    .site-main .subscribe-us-area .subscribe .subscribe-title p,
-    h4,
-    .site-main .services-area,
-    .site-main .subscribe-us-area .subscribe {
-        padding: 2%;
-        margin: 0%;
-    }
-
-    .site-main .site-banner .site-title h1 {
-        font-size: 41px;
-    }
-
-    .site-main .subscribe-us-area .subscribe form .input-textbox input {
-        width: 15rem !important;
-    }
-
-    .site-main>.services-area .services {
-        width: 13rem;
-    }
-
-}
-
-/* if the viewport is equal to 340px or less than that */
-@media only screen and (max-width: 792px) {
-    .title-text {
-        font: normal bold 25px/ 72px var(--roboto)!important;
-    }
-    .site-main .site-banner .site-title h4 {
-        font-size: 1rem!important;
-      }
-    .site-main .about-area .about-title h2>span {
-        font-size: 31px;
-        letter-spacing: 10px;
-    }
-
-    .site-main .brand-area .experience-area .years-area {
-        padding-left: 1%;
-        width: 49%;
-    }
-
-    .site-main .brand-area .experience-area .bg-panel {
-        margin-left: 30%;
-        width: 80%;
-    }
-
-    .site-main .brand-area .experience-area .call-area {
-        padding-left: 3%;
-    }
-
-    .site-main .project-area .button-group button {
-        font: normal 500 18px/40px var(--roboto);
-    }
-
-    .site-main .about-area .about-title p {
-        padding: 0%;
-    }
-
-    .site-main .subscribe-us-area .subscribe form .input-textbox input {
-        width: 20rem;
-        margin: 5%;
-    }
-}
-
-/* if the viewport is equal to 1910px or less than that */
-@media only screen and (max-width: 1910px) {
+/* ---- Extra Large (< 1400px) ---- */
+@media only screen and (max-width: 1400px) {
     .header_area .main-menu .navbar {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* ---- Large / Desktop (< 1200px) ---- */
+@media only screen and (max-width: 1200px) {
+    .hero-name {
+        font-size: var(--text-5xl);
+    }
+}
+
+/* ---- Medium / Tablet (< 992px) ---- */
+@media only screen and (max-width: 992px) {
+    .hero-section .row {
+        flex-direction: column;
     }
 
-    .container {
-        max-width: 90%;
+    .hero-section .col-lg-7,
+    .hero-section .col-lg-5 {
+        max-width: 100%;
+        flex: 0 0 100%;
     }
 
-    .site-main .brand-area,
-    .site-main .services-area .services-title,
-    .site-main .about-area {
-        padding: 3% 4%;
+    .hero-visual {
+        margin-top: var(--space-8);
+    }
+
+    .hero-visual lottie-player {
+        max-width: 350px;
+    }
+
+    .hero-name {
+        font-size: var(--text-4xl);
+    }
+
+    .hero-description {
+        font-size: var(--text-base);
+    }
+
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+
+    .testimonials-stack-container {
+        height: 320px;
+    }
+}
+
+/* ---- Small / Mobile Landscape (< 768px) ---- */
+@media only screen and (max-width: 768px) {
+    :root {
+        --nav-height: 64px;
+    }
+
+    .header_area .main-menu .navbar {
+        padding: 0.5rem;
+    }
+
+    .hero-section {
+        padding-top: calc(var(--nav-height) + var(--space-8));
+        min-height: auto;
+        padding-bottom: var(--space-12);
+    }
+
+    .hero-name {
+        font-size: var(--text-3xl);
+    }
+
+    .hero-role {
+        font-size: var(--text-xl);
+    }
+
+    .hero-greeting {
+        font-size: var(--text-base);
+    }
+
+    .hero-description {
+        font-size: var(--text-sm);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .hero-buttons .btn-primary-custom,
+    .hero-buttons .btn-secondary-custom {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-orb-1,
+    .hero-orb-2,
+    .hero-orb-3 {
+        display: none;
+    }
+
+    .hero-mouse-glow {
+        display: none;
+    }
+
+    /* Sections */
+    .section {
+        padding: var(--space-16) 0;
+    }
+
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-10);
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-dot {
+        left: -24px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-dot.active {
+        width: 14px;
+        height: 14px;
+        left: -25px;
+    }
+
+    .timeline-item {
+        padding-left: var(--space-6);
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .timeline-body {
+        padding: var(--space-4);
+    }
+
+    .timeline-company {
+        font-size: var(--text-lg);
+    }
+
+    /* Skills */
+    .skill-pill {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .skill-category {
+        padding: 0 var(--space-4);
+    }
+
+    /* Education */
+    .education-card {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--space-4);
+        padding: var(--space-5);
+    }
+
+    .education-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .education-info h4 {
+        font-size: var(--text-base);
+    }
+
+    .education-grid {
+        padding: 0 var(--space-4);
+    }
+
+    /* Testimonials */
+    .testimonials-stack-container {
+        height: 340px;
+    }
+
+    .testimonial-stack-card {
+        padding: var(--space-5);
+    }
+
+    .testimonial-stack-card::before {
+        font-size: 50px;
+    }
+
+    .stack-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .stack-btn-prev {
+        left: -8px;
+    }
+
+    .stack-btn-next {
+        right: -8px;
+    }
+
+    /* YouTube */
+    .youtube-strip {
+        padding: var(--space-4) var(--space-4);
+        gap: var(--space-3);
+    }
+
+    .youtube-strip-text {
+        font-size: var(--text-sm);
+    }
+
+    /* Footer */
+    .footer-area {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+
+    /* Scroll to top */
+    #scroll-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    /* Mobile nav links */
+    .mobile-nav-links a {
+        font-size: var(--text-xl);
+    }
+
+    .mobile-nav-overlay {
+        width: 280px;
+    }
+}
+
+/* ---- Extra Small / Mobile Portrait (< 480px) ---- */
+@media only screen and (max-width: 480px) {
+    .hero-name {
+        font-size: var(--text-2xl);
+    }
+
+    .hero-role {
+        font-size: var(--text-lg);
+    }
+
+    .hero-badge {
+        font-size: var(--text-xs);
+    }
+
+    .timeline-body ul li {
+        font-size: var(--text-xs);
+    }
+
+    .testimonial-stack-card .testimonial-text {
+        font-size: var(--text-sm);
+    }
+
+    .testimonials-stack-container {
+        height: 360px;
+    }
+
+    .mobile-nav-links a {
+        font-size: var(--text-lg);
+    }
+}
+
+/* ---- Tiny screens (< 340px) ---- */
+@media only screen and (max-width: 340px) {
+    .hero-name {
+        font-size: var(--text-xl);
+    }
+
+    .hero-buttons .btn-primary-custom,
+    .hero-buttons .btn-secondary-custom {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--text-sm);
+    }
+
+    .section-title {
+        font-size: var(--text-xl);
     }
 }
