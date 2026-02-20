@@ -133,6 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===================== STACKED TESTIMONIALS =====================
     const testimonialData = [
         {
+            text: "For the few years and projects we worked together on, Alok demonstrated strong engineering skills and interest to the business side of the world. He is great to have on your team, and he is always looking to learn more and to help when needed.",
+            name: "Iva Grigorova",
+            role: "Product Manager at JLL",
+            img: "./img/testimonials/iva.jpeg",
+            linkedin: "https://www.linkedin.com/in/iva-p-grigorova/"
+        },
+        {
             text: "Alok is a go-getter person who believes that anything is achievable if you put your best foot forward. This was the attitude that struck me the most about him and helped the team think the same way. He is very good at thinking outside the box and coming up with solutions that may seem impossible but are actually the best ones. He also brings in a positive energy into the team which helps drive things so easy. He is an excellent addition to any team.",
             name: "Pragati Rithekar",
             role: "Direct Manager",
