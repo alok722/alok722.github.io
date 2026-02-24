@@ -586,6 +586,13 @@
     margin-top: 0;
 }
 
+.timeline-lead {
+    margin: 0 0 var(--space-4) 0;
+    font-size: var(--text-base);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
 .timeline-body ul {
     list-style: none;
     padding: 0;
