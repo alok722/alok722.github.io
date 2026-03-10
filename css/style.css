@@ -318,7 +318,7 @@ ul {
 }
 
 .site-main .project-area .grid .our-project>.title h4 {
-  font: normal 700 25px/12px var(--roboto);
+      font: normal 700 25px/1.3 var(--roboto);
 }
 
 .site-main .project-area .grid .our-project .img a:hover img {
