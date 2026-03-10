@@ -325,6 +325,15 @@ ul {
   filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
 
+.site-main .project-area .grid .our-project {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-main .project-area .grid .our-project .title {
+    margin-top: auto;
+}
+
 /* End Certificate Area */
 
 /* About Me */
